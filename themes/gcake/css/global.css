@@ -1,0 +1,245 @@
+﻿/* 全局CSS定义 */
+body{font: 14px  "Microsoft Yahei", "微软雅黑" , "Helvetica Neue", "Hiragino Sans GB", "Segoe UI" ,SimSun , "宋体" , Tahoma, Arial, STHeiti, sans-serif;margin:0;border:0;padding:0;font-size:12px; color:#d36333;min-width:1036px;}
+div,form,ul,ol,li,dl,dt,dd,span,p{margin:0;padding:0;border:0;}
+img,a img{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+ul,ol,li,dl,dt,dd{list-style:none;}
+table,td,input{font-size:12px;padding:0}
+i,em,var { font-style:normal; }
+
+/* clearFix */
+.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}
+.clearfix{zoom:1}
+.clear{clear:both;}
+
+/* 默认链接颜色 */
+a{outline-style:none;text-decoration:none; color:#d36333;}
+
+/*常用padding margin*/
+.marT8{ margin-top:8px; }
+.marL10{ margin-left:10px; }
+.marL15{ margin-left:15px; }
+.marL38{ margin-left:38px; }
+.marL70{ margin-left:70px; }
+.marL250{ margin-left:250px; }
+.marT10{ margin-top:10px; }
+.marT15{ margin-top:15px; }
+.marT8{margin-top:8px;}
+.marT5{margin-top:5px;}
+.marT20{margin-top:20px;}
+.marT25{margin-top:25px;}
+.marT30{margin-top:30px;}
+.marL20{margin-left:20px;}
+.marR5{margin-right:5px;}
+.marR10{margin-right:10px;}
+.marR15{margin-right:15px;}
+.marR20{margin-right:20px;}
+.marR25{margin-right:29px;}
+.marR10{margin-right:10px;}
+.padL10{ padding-left:10px;}
+.padL30{ padding-left:30px;}
+.padL50{ padding-left:50px;}
+.padT10{ padding-top:10px;}
+.padT15{ padding-top:15px;}
+.padT20{ padding-top:20px;}
+.padR8{ padding-right:8px;}
+.padR20{ padding-right:20px;}
+.padR30{ padding-right:30px;}
+.padL25{ padding-left:25px;}
+.padT25{ padding-top:25px;}
+.padB25{ padding-bottom:25px;}
+.padTB25{ padding:25px 0 1px 0;}
+
+/*line-height*/
+.lineH25{ line-height:25px;}
+.lineH20{ line-height:20px;}
+.lineH16{ line-height:16px;}
+.lineH30{ line-height:30px;}
+.lineH40{ line-height:40px;}
+.lineH22{ line-height:22px;}
+
+/*清除链接虚框*/
+a,area,button {blr:expression(this.onFocus=this.blur()) }
+:focus {-moz-outline-style: none; }
+
+/*文字对齐方式*/
+.txtLeft{text-align:left}
+.txtRight{text-align:right}
+.txtCenter{text-align:center}
+
+/* 下划线 */
+.unline,.unline a{text-decoration:underline}
+.nounline,.nounline a,.list12 .nounline{text-decoration:none}
+
+/* 通用属性 */
+.left{float:left;}
+.right{float:right;}
+
+.clear{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0 }/*ie and firefox1.5 updata */
+
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*常用方法*/
+.show{display:block}
+.hidden{display:none}
+.hand{cursor:pointer;}
+.fontArial{font-family:'Arial';}
+.b{font-weight:bold;}
+
+/*按钮*/
+.lijigoumai{height:37px; width:132px; display:block; background:url(../images_xin/purchase/lijigoumai.jpg) no-repeat; cursor:pointer;}
+.shoucang{background:url(../images_xin/purchase/shoucang.jpg)  no-repeat; display:block; width:87px; height:27px; cursor:pointer;}
+
+/*header 样式 */
+.header{width:100%; height:100px;border:3px solid #523d30;border-width:3px 0;background:url(../images_xin/header_bg.png) repeat; position:relative;}
+.header .nav{width:990px; height:100px; margin:0 auto;}
+.header .nav .logo{width:104px; height:104px; position:absolute; z-index:30;top:-2px;}
+.header .nav .numb{font-size:16px; font-weight:bold;}
+.header .nav .left_header{width:830px; height:100px;}
+.header .nav .left_header .left_shang{width:830px; height:50px; line-height:22px; padding-top:10px;}
+.header .nav .left_header .left_shang img{ margin:12px 0; vertical-align:middle;}
+.header .nav .left_header .left_xia{height:40px; width:830px;}
+.header .nav .nav_right{width:230px; height:40px;}
+.header .nav .nav_right .input{ width:163px; height:20px; background:#f2deb5 ; border:0 none; line-height:20px; margin-right:5px;vertical-align:middle; border-left:#f2deb5 2px solid; border-top:#f2deb5 2px solid; border-right:#f2deb5 2px solid;}
+.header .nav .nav_right .button{ border:0 none; background:url(../images_xin/header_button.jpg) no-repeat center center; width:22px; height:22px; cursor:pointer; vertical-align:middle;}
+.header .nav .nav_center{width:600px; height:40px;}
+.header .nav_center .test li{float:left; width:85px; position:relative;}
+.header .nav_center .test li a{border-left:#7f7561 1px solid; display:block; text-align:center; line-height:25px; height:25px;}
+.header .nav_center .test li:hover{ background:#342b24;}
+.header .nav_center .test li:hover a{color:#FFF}
+.header .nav_center .test li img{padding-left:8px; margin:9px 0; vertical-align:middle;}
+.header .nav_center .test .nav_xia_ul { display:none; position:absolute; top:25px; left:0px; z-index:40; background:#342b24; border:none; width:85px;}
+.header .nav_center .test .nav_xia_ul li{ margin:0; padding:0; height:36px;}
+.header .nav_center .test .nav_xia_ul li a{ border:none; border-bottom:#3f342b solid 1px; display:block; text-align:left; line-height:35px; width:61px; margin:0 10px; height:35px; color:#cea758;white-space:nowrap;overflow:hidden;}
+.header .nav_center .test .nav_xia_ul li:hover a{color:#FFF}
+/*footer 样式*/
+.footer{width:100%; height:195px; background:#310b09; color:#d36333; position:relative;}
+.footer .content{width:990px; margin:0 auto; height:165px;}
+.footer .content .first{height:60px; width:741px; margin:0 auto;}
+.footer .content .first .p1{text-align:right; width:350px; border-right:#d36333 1px solid;}
+.footer .content .first .p2{width:350px; }
+.footer .content .second{height:80px; background:url(../images_xin/footer.png) center top no-repeat; line-height:50px;}
+.footer .content .second .p1{width:455px; text-align:right;}
+.footer .content .second .p2{width:460px;}
+.ccnz{ position:absolute; left:30px; top:130px;}
+/*按钮CSS3*/
+.button_tongyong{
+	display:inline-block;
+	background:#e3c27d;/* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e3c27d', endColorstr='#bd9b56'); /* for IE */
+	background: -moz-linear-gradient(center top , #e3c27d 0px, #bd9b56 100%) repeat scroll 0 0 transparent;/* for webkit browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#e3c27d), to(#bd9b56)) repeat scroll 0 0 transparent;/* for firefox 3.6+ */
+        border: 1px solid #b2914e;
+        font-weight:bold;
+        line-height:30px;
+		cursor:pointer;
+		text-align:center;
+	}
+	
+.table_style{
+	width:980px;
+	text-align:center;
+	background: none repeat scroll 0 0 #FDFDF3;
+    border-left: 1px solid #D3D2BE;
+	border-top: 1px solid #D3D2BE;
+}
+.order_table_style{
+	width:775px;
+	background: none repeat scroll 0 0 #FDFDF3;
+        border-left: 1px solid #D2AF6B;
+	border-top: 1px solid #DD2AF6B;
+        color:#000;
+}
+.table_style th,
+.table_style td{
+	text-align:center;
+	border-right: 1px solid #D3D2BE;
+	border-bottom: 1px solid #D3D2BE;
+	padding:5px;
+	text-align:center;
+}
+.order_table_style th,
+.order_table_style td{
+	border-right: 1px solid #D2AF6B;
+	border-bottom: 1px solid #D2AF6B;
+	padding:5px;
+	text-align:center;
+}
+.table_style th h2 {
+	height:40px;
+	line-height:40px;
+	padding-left:14px;
+	font-size:14px;
+	text-align:left;
+}
+.table_style td{
+	background: none repeat scroll 0 0 #FDEEC5;
+}
+.table_style td.bg{
+	background: none repeat scroll 0 0 #fbfae6;
+}
+.table_style td.bottom{
+	background: none repeat scroll 0 0 #FDF6D9;
+}
+.table_style td.bottom div{
+	background: none repeat scroll 0 0 #FDF6D9;
+	margin-top:1px;
+	height:40px;
+	line-height:40px;
+	width:970px;
+	padding:0 5px;
+}
+.table_style td.bottom span.dele{
+	display:block;
+	width:300px;
+	text-align:left;
+	float:left;
+}
+.table_style td.bottom span.total{
+	display:block;
+	width:300px;
+	text-align:right;
+	float:right;
+}
+.table_style  .count{
+	width:71px;
+	height:20px;
+	margin:0 auto;
+}
+.table_style .sub,
+.table_style .add{
+	width:11px;
+	height:11px;
+	background:url(../images_xin/shopping/jian.jpg) no-repeat;
+	overflow:hidden;
+	display:block;
+	cursor:pointer;
+	margin:4px 0 0 0;
+	float:left;
+}
+.table_style .add {
+	background:url(../images_xin/shopping/jia.jpg) no-repeat;
+	margin:4px 0 0 5px;
+}
+.table_style .inp37 {
+	width:37px;
+	height:19px;
+	border:1px #b9b9b9 solid;
+	float:left;
+	margin:0 0 0 5px;
+	text-align:center;
+}
+
+
+/*market_cart*/
+#ECS_CARTINFO b{float:right;height:20px;line-height:22px;margin:0 0 0 5px;padding:0 8px;background:#f2deb5;text-align:center;font-weight:normal;}
+
+
+/*Copyright*/
+.c_r{text-align:center;}

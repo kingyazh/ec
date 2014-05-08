@@ -1,0 +1,70 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.purchase{width:100%; background:#fbfae5; height:auto; color:#241c15;}
+.purchase .content{width:990px; margin:0 auto; height:auto;/*background:#DBCEA7;*/}
+.purchase .content .mulu{line-height:30px; padding-top:60px; }
+.purchase .content .mulu a{color:#241c15;}
+.purchase .content .height{height:auto;}
+.purchase .content .height .font_14{font-size:14px;}
+.purchase .content .height .font_18{font-size:18px;}
+.purchase .content .height .product_bigimg{float:left; height:400px; width:490px; text-align:center; border:#cfad66 3px solid; margin-top:7px; position:relative;}
+.purchase .content .height .product_bigimg img{height:400px;}
+.purchase .content .height .property{ width:420px; margin-left:60px; color:#999;}
+.purchase .content .height .property .name{font-size:16px; line-height:40px; color:#000;}
+.purchase .content .height .property .buy_number{text-align:center; border-bottom:#cfad67 1px solid; padding-bottom:5px; height:20px; color:#000;}
+.purchase .content .height .property .buy_number span{ display:block; float:left; line-height:20px;}
+.purchase .content .height .property .buy_number .w160{ width:160px; padding-left:15px; text-align:left;}
+.purchase .content .height .property .buy_number .w120{ width:120px;}
+.purchase .content .height .product_list{height:120px; border-bottom:#000 1px solid;}
+.purchase .content .height .product_list .product_smallimg{width:450px; height:120px;}
+.purchase .content .height .product_list .product_smallimg ul li{float:left; border:#dbc28a 1px solid; margin-right:15px;}
+.purchase .content .height .product_list .product_smallimg ul li img{width:85px; height:85px;}
+.purchase .content .height .product_list .product_collect{width:430px; height:auto; padding-top:70px; line-height:37px;}
+/*zhushi*/
+.purchase .content .height .kuang{margin:15px 0 0 0; border-bottom:#000 1px solid; color:#241c15;}
+.purchase .content .height .product_suit:after{ clear:both; content:"."; visibility:hidden; height:0; display:block; padding-bottom:15px;}
+.purchase .content .height .comment{height:auto; margin:0 15px; background:#fdf7d8;}
+.purchase .content .height .h4{line-height:40px; background:#f9e7ba;}
+.purchase .content .height .comment_content{line-height:25px; margin:0 15px; padding:15px 0 8px 0; border-bottom:#b7af98 1px solid;}
+.purchase .content .height .yema a{color:#000}
+.purchase .content .height .yema a:hover{color:#000}
+
+/*放大镜效果*/
+.zoomdiv {
+	z-index : 100;
+	position:absolute;
+	border:1px solid #CCCCCC;
+	display:none;
+	text-align: center;
+	overflow: hidden;
+}
+.jqZoomPup {
+	z-index : 10;
+	visibility :hidden;
+	position:absolute;
+	border:1px solid #aaa;
+	background: #ffffff;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	filter: alpha(Opacity=50);
+}
+
+.button_shoucang{
+	width:80px; height:30px;
+	}
+.button_goumai{
+	width:100px; height:35px;
+    font-size:14px;
+	}
+.taocan{height:200px; border:#d4b36e 1px solid; line-height:16px;}
+.taocan .biaoti{height:35px; border-bottom:#d4b36e 1px solid; line-height:35px; font-weight:bold; padding-left:15px;}
+.taocan .content{line-height:16px; text-align:center; height:130px; width:700px;}
+.taocan .content .price{ color:#F00;}
+.taocan .price_right{margin-right:50px; line-height:20px; max-width:220px;}
+.taocan ul li{float:left;}
+.taocan ul li a{display:block; width:150px;}
+.taocan ul li a img{width:90px; height:90px;}
+.button_taocan{width:80px; height:25px;}
+.padT45{padding-top:45px;}
+.padT50{padding-top:50px;}

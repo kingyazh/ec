@@ -1,0 +1,245 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+    <meta content="width=1060" name="viewport">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>jQuery Zoom In/Out Sliders Full Collection - Majestic Skin Fade Transition</title>
+    <meta content="This advanced jquery slider can by used as layer slider or carousel" name="description">
+    <meta content="jquery slider, jquery carousel, responsive slider, content slider, image slider, responsive"
+          name="keywords">
+
+    <link type="text/css" rel="stylesheet" href="http://www.zoompanningeffectslider.com/css/style.css">
+    <!--[if IE 7]>
+    <link href="http://www.zoompanningeffectslider.com/css/style_ie7.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="http://www.zoompanningeffectslider.com/css/topBarPromoter.css">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700,900,700italic,900italic">
+
+    <!-- must have -->
+    <link type="text/css" rel="stylesheet" href="http://www.zoompanningeffectslider.com/bannerscollection_zoominout.css">
+
+    {insert_scripts files='jquery-ui.min.js,jquery.ui.touch-punch.min.js,bannerscollection_zoominout.js'}
+
+</head>
+
+<body style="margin-top: 38px;">
+
+<div id="page-wrap">
+
+
+
+
+<div>
+
+<script>
+
+    jQuery(function () {
+
+        jQuery('#bannerscollection_zoominout_majestic').bannerscollection_zoominout({
+            skin: 'majestic',
+            responsive: false,
+            width: 960,
+            height: 400,
+            myloaderTime: 0,
+            autoHideNavArrows: true,
+            numberOfThumbsPerScreen: 8,
+            thumbsOnMarginTop: 23,
+            thumbsWrapperMarginTop: 0,
+            scrollSlideDuration: 0.8,
+            scrollSlideEasing: 'easeOutQuad',
+            fadeSlides: true            });
+
+    });
+</script>
+<div style="background:url(preview_images/whiteBg.jpg) top center no-repeat; clear:both; margin-bottom:200px;">
+<div class="generalWidth">
+
+
+<!-- SLIDER START -->
+
+
+<div style="padding-top:79px;">
+
+<div style="position: relative; width: 961px; height: 400px;" id="zoominoutParent_84744">
+<div class="bannerscollection_zoominout majestic ui-draggable"
+     style="cursor: url(&quot;skins/hand.cur&quot;), url(&quot;skins/hand.cur&quot;), move; width: 960px; height: 400px;">
+<div id="bannerscollection_zoominout_majestic">
+    <div class="myloader" style="display: none;"></div>
+    <!-- CONTENT -->
+    <ul class="bannerscollection_zoominout_list">
+        <li data-bottom-thumb="images/majesticFixedDimensions/thumbs/01_majestic.jpg" data-verticalposition="top"
+            data-horizontalposition="left" data-text-id="#bannerscollection_zoominout_photoText1" data-finalzoom="0.71"
+            data-initialzoom="1"><img width="1400" height="580" alt=""
+                                      src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/01_majestic.jpg"></li>
+
+        <li data-target="_blank" data-link="http://codecanyon.net/user/LambertGroup"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/02_majestic.jpg" data-verticalposition="center"
+            data-horizontalposition="right" data-text-id="#bannerscollection_zoominout_photoText2" data-finalzoom="0.71"
+            data-initialzoom="1"><img width="1400" height="580" alt=""
+                                      src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/02_majestic.jpg"></li>
+
+        <li data-verticalposition="center" data-horizontalposition="center"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/03_majestic.jpg"
+            data-text-id="#bannerscollection_zoominout_photoText3" data-finalzoom="1" data-initialzoom="0.71"><img
+                width="1400" height="580" alt="" src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/03_majestic.jpg"></li>
+
+
+        <li data-video="true" data-text-id="#bannerscollection_zoominout_photoText4"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/04_majestic.jpg" data-duration="12"
+            data-verticalposition="bottom" data-horizontalposition="left" data-finalzoom="0.71" data-initialzoom="1">
+            <img width="1400" height="580" alt="" src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/04_majestic.jpg">
+            <iframe width="100%" height="100%" frameborder="0" allowfullscreen="" src="http://player.youku.com/player.php/sid/XNzAyMzMzNDA4/v.swf"></iframe>
+        </li>
+
+
+        <li data-text-id="#bannerscollection_zoominout_photoText5"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/05_majestic.jpg" data-verticalposition="center"
+            data-horizontalposition="right" data-finalzoom="0.71" data-initialzoom="1">
+			<img width="1400" height="580" alt="" src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/05_majestic.jpg">
+        </li>
+
+        <li data-bottom-thumb="images/majesticFixedDimensions/thumbs/06_majestic.jpg" data-verticalposition="center"
+            data-horizontalposition="right" data-finalzoom="1" data-initialzoom="0.74"><img width="1400" height="580"
+                                                                                            alt=""
+                                                                                            src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/06_majestic.jpg">
+        </li>
+
+        <li data-text-id="#bannerscollection_zoominout_photoText7"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/07_majestic.jpg" data-finalzoom="0.72"
+            data-initialzoom="0.85"><img width="1400" height="580" alt=""
+                                         src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/07_majestic.jpg">
+        </li>
+
+        <li data-bottom-thumb="images/majesticFixedDimensions/thumbs/08_majestic.jpg" data-finalzoom="0.70"
+            data-initialzoom="1"><img width="1400" height="580" alt=""
+                                      src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/08_majestic.jpg"></li>
+
+        <!--first8-->
+        <!--second8-->
+
+        <li data-bottom-thumb="images/majesticFixedDimensions/thumbs/01_majestic.jpg" data-verticalposition="top"
+            data-horizontalposition="left" data-text-id="#bannerscollection_zoominout_photoText1b" data-finalzoom="0.71"
+            data-initialzoom="1"><img width="1400" height="580" alt=""
+                                      src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/01_majestic.jpg"></li>
+
+        <li data-target="_blank" data-link="http://codecanyon.net/user/LambertGroup"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/02_majestic.jpg" data-verticalposition="center"
+            data-horizontalposition="right" data-text-id="#bannerscollection_zoominout_photoText2b"
+            data-finalzoom="0.71" data-initialzoom="1"><img width="1400" height="580" alt=""
+                                                            src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/02_majestic.jpg"></li>
+
+        <li data-verticalposition="center" data-horizontalposition="center"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/03_majestic.jpg"
+            data-text-id="#bannerscollection_zoominout_photoText3b" data-finalzoom="1" data-initialzoom="0.71"><img
+                width="1400" height="580" alt="" src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/03_majestic.jpg"></li>
+
+
+        <li data-video="true" data-text-id="#bannerscollection_zoominout_photoText4b"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/04_majestic.jpg" data-duration="12"
+            data-verticalposition="bottom" data-horizontalposition="left" data-finalzoom="0.71" data-initialzoom="1">
+            <img width="1400" height="580" alt="" src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/04_majestic.jpg">
+            <iframe width="100%" height="100%" frameborder="0" allowfullscreen=""
+                    src="http://player.youku.com/player.php/sid/XNzAyMzMzNDA4/v.swf"></iframe>
+        </li>
+
+
+        <li data-text-id="#bannerscollection_zoominout_photoText5b"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/05_majestic.jpg" data-verticalposition="center"
+            data-horizontalposition="right" data-finalzoom="0.71" data-initialzoom="1"><img width="1400" height="580"
+                                                                                            alt=""
+                                                                                            src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/05_majestic.jpg">
+        </li>
+
+        <li data-bottom-thumb="images/majesticFixedDimensions/thumbs/06_majestic.jpg" data-verticalposition="center"
+            data-horizontalposition="right" data-finalzoom="1" data-initialzoom="0.74"><img width="1400" height="580"
+                                                                                            alt=""
+                                                                                            src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/06_majestic.jpg">
+        </li>
+
+        <li data-text-id="#bannerscollection_zoominout_photoText7b"
+            data-bottom-thumb="images/majesticFixedDimensions/thumbs/07_majestic.jpg" data-finalzoom="0.72"
+            data-initialzoom="0.85"><img width="1400" height="580" alt=""
+                                         src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/07_majestic.jpg">
+        </li>
+
+        <li data-bottom-thumb="images/majesticFixedDimensions/thumbs/08_majestic.jpg" data-finalzoom="0.70"
+            data-initialzoom="1"><img width="1400" height="580" alt=""
+                                      src="http://www.zoompanningeffectslider.com/images/majesticFixedDimensions/08_majestic.jpg"></li>
+
+        <!--endSecond8-->
+    </ul>
+
+
+    <!-- TEXTS -->
+
+    <!--End First Slide Texts-->
+
+
+    <!--End Second Slide Texts-->
+
+
+    <!--End Third Slide Texts-->
+
+
+    <!--End Fifth Slide Texts-->
+
+
+    <!--End Seventh Slide Texts-->
+
+
+    <!-- next 8 -->
+    <!--End First Slide Texts-->
+
+
+    <!--End Second Slide Texts-->
+
+
+    <!--End Third Slide Texts-->
+
+
+    <!--End Fifth Slide Texts-->
+
+
+    <!--End Seventh Slide Texts-->
+
+
+</div>
+<div class="bottomNav" style="width: 0px; left: 480px;"></div>
+<div class="playOver" style="left: 443px; top: 163px; display: none;"></div>
+</div>
+</div>
+
+
+</div>
+<!-- padding -->
+
+
+<!-- SLIDER END -->
+
+
+</div>
+</div>
+
+
+</div>
+
+<!--end Footer-->
+
+
+</div>
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    (function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&"www.cloudflare.com/email-protection"==a.substr(7 ,35)){s='';j=43;r=parseInt(a.substr(j,2),16);for(j+=2;a.length-j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+    /* ]]> */
+</script>
+
+
+<div class="open_btn"
+     style="width: 100%; top: 0px; right: 0px; position: fixed; border-top: 1px solid rgb(0, 0, 0); margin: 0px; padding: 0px; display: none;">
+    <a class="openLink" href="javascript:void(0)"><img border="0" src="preview_images/example1/openBtn.png"
+                                                       style="position: absolute; right: 0px;"></a></div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<?phpdefine('IN_ECS', true);define('TOKEN','123456');//填写在网站申请的时候你定义的tokenfunction checkToken(){	if(TOKEN == $_GET['token']){		return true;	}	return false;}

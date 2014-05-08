@@ -1,0 +1,122 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* lunbo */
+#billboard { position:relative; z-index:1; width:100%; padding:0; overflow:hidden; text-align:center; }
+#billboard a { text-decoration:none; }
+#billboard .gallery-content { position:relative; z-index:1000; float:left; min-width:1115px; height:100%; overflow:hidden; -webkit-transform:translateZ(0); }
+#billboard .gallery-content .inner { padding-top:53px; position:relative; height:100%; min-height:100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* nav
+==================================== */
+#billboard .nav { display:block; position:absolute; z-index:1002; left:0; bottom:-4px; right:0; height:48px; -webkit-tap-highlight-color:transparent; }
+#billboard .nav .wrapper { margin:0 auto; width:993px; padding:1em 0 .8em; }
+#billboard .nav ul { margin:0; width:100%; }
+#billboard .nav .dot,
+#billboard .nav .dot a { display:-moz-inline-stack; display:inline-block; *display:inline; zoom:1; }
+
+/* dot nav */
+.dots .dot { position:relative; margin:0 8px; width:12px; height:12px; }
+.dots .dot a { position:absolute; top:2px; left:2px; width:6px; height:6px; text-indent: 100%; white-space: nowrap; 
+	overflow: hidden; background:#949494; border:1px solid transparent; outline:none;
+  -webkit-box-shadow:none;
+     -moz-box-shadow:none;
+          box-shadow:none;
+  -webkit-border-radius:50%;
+     -moz-border-radius:50%;
+          border-radius:50%;
+
+}
+.dots .dot a:hover { top:2px; background:#666; }
+.dots .dot a.active { top:0px; left:0; border:1px solid; background:transparent; width:10px; height:10px;
+  -webkit-box-shadow:none;
+     -moz-box-shadow:none;
+          box-shadow:none;
+}
+
+#billboard.black .dots .dot a { background:#000; }
+#billboard.black .dots .dot a.active { border-color:#000; background-color:transparent; }
+
+/* paddle nav */
+#billboard .paddle-nav { width:100%; height:100%; *margin-top:-100px; *height:100px; }
+#billboard .paddle-nav li { _display:none; zoom:1; }
+#billboard .paddle-nav li .arrow { display:block; opacity:0; position:absolute; z-index:1002; top:108px; bottom:108px; padding:0 25px; outline:none; cursor:pointer; zoom:1; -webkit-transform:translateZ(0);
+  -webkit-transition:opacity 0.25s ease-out;
+     -moz-transition:opacity 0.25s ease-out;
+          transition:opacity 0.25s ease-out;
+}
+#billboard .paddle-nav li .arrow:hover { opacity:1; }
+#billboard .paddle-nav li .arrow.disabled { cursor:default; opacity:0; filter:alpha(opacity=0); }
+#billboard .paddle-nav li .arrow b { position:absolute; z-index:1002; display:block; top:50%; margin-top:-35px; width:36px; height:71px; padding:20px 14px; text-indent:-9999px; overflow:hidden; background-repeat:no-repeat; background-position:50% 50%; background-size:36px 71px; zoom:1; -webkit-transform:translateZ(0); }
+#billboard .paddle-nav li .arrow.prev { left:0; right:50%; margin-right:675px; }
+#billboard .paddle-nav li .arrow.next { right:0; left:50%; margin-left:675px; }
+#billboard .paddle-nav li .arrow.prev b { left:38px; background-image:url(../images_xin/paddle_prev_999.png); }
+#billboard .paddle-nav li .arrow.next b { right:38px; background-image:url(../images_xin/paddle_next_999.png); }
+#billboard.dark .paddle-nav li .arrow.next b { background-image:url(../images_xin/paddle_next_999.png); }
+#billboard.dark .paddle-nav li .arrow.prev b { background-image:url(../images_xin/paddle_prev_999.png); }
+
+/* slide shared
+------------------------*/
+#billboard .image { background-repeat:no-repeat; }
+#billboard .image { display:block; z-index:1; width:980px; margin:0 auto; position:relative;}
+#billboard .background {z-index:2; width:100%; min-width:980px; height:100%; overflow:hidden; }
+#billboard .full-span { display:block; position:absolute; z-index:3; top:0; left:0; width:100%; height:100%; overflow:hidden; text-indent:-9999px; }
+/*lunbo1
+=================================================================*/
+#billboard .lunbo1 .image  { 
+	background-image:url(../images_xin/acrab.jpg); 
+	width:993px; 
+	height:541px; 
+	background-size:993px 541px; 
+}
+
+
+/* lunbo2
+=================================================================*/
+#billboard .lunbo2 .image { 
+	background-image:url(../images_xin/lunbo/bate.jpg); 
+	width:1065px; 
+	height:541px; 
+	background-size:1065px 541px
+}
+
+/* lunbo1*/
+#billboard .morao .image { 
+	background-image:url(../images_xin/sheshou_lunbo.jpg); 
+	width:993px; 
+	height:541px; 
+	background-size:993px 541px; 
+}
+
+/* lunbo3*/
+#billboard .lunbo3 .image { 
+	background-image:url(../images_xin/lunbo/xinnian.jpg); 
+	width:1043px; 
+	height:541px; 
+	background-size:1043px 541px; 
+}
+/* lunbo4*/
+#billboard .lunbo4 .image { 
+	background-image:url(../images_xin/shengdan_bg.jpg); 
+	width:1036px; 
+	height:541px; 
+	background-size:1036px 541px; 
+}
+/* lunbo4*/
+#billboard .lunbo5 .image { 
+	background-image:url(../images_xin/sheng.jpg); 
+	width:990px; 
+	height:541px; 
+	background-size:990px 541px; 
+}
+.h1{color:#55201c; font-weight:bold; font-size:16px; line-height:30px;}
+.h1 a{color:#55201c}
+.xuanhuan{margin:0 auto; width:990px; height:235px; background:#f8f3ed; border:1px solid #d1b482; position:relative;}
+.xuanhuan div{ float:left; height:235px; color:#000; padding:5px 0; margin:0 35px;}
+.xuanhuan div li{float:left; margin:0 5px; width:221px; border-right:1px dashed #999;height:225px;}
+.xuanhuan div li a{color:#000;}
+.xuanhuan div li .name{margin-top:15px; font-weight:bold;}
+.xuanhuan div li .price{margin-top:8px;}
+.xuanhuan div li .price b{color:#f00505}
+.xuanhuan .next1,.next2,.next3,.next4{ display:block; width:28px; background:url(../images_xin/index/jiantou_zuo.jpg) no-repeat 0 center #f8f3ed; position:absolute; left:0; height:230px; z-index:100;}
+.xuanhuan .prev1,.prev2,.prev3,.prev4{display:block; width:40px; background:url(../images_xin/index/jiantou_you.jpg) no-repeat right center #f8f3ed; position:absolute; right:0; height:230px; z-index:100;}

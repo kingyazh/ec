@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<!-- {if $article.cat_id == "4"} -->
+<!---->
+<!-- #BeginLibraryItem "/library/index_show.lbi" --><!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/index_pic_menu.lbi" --><!-- #EndLibraryItem -->
+
+
+
+<div class="index_content clearfix">
+
+
+    <!--// start products list //-->
+    <!-- TemplateBeginEditable name="首页展示主区域" --><!-- TemplateEndEditable -->
+
+    <!-- TemplateBeginEditable name="产品列表" --><!-- TemplateEndEditable -->
+    <!--// end products list //-->
+
+
+
+
+    <!-- TemplateBeginEditable name="关于门客文字部分" -->
+    <!-- #BeginLibraryItem "/library/index_mensa.lbi" --><!-- #EndLibraryItem -->
+    <!-- TemplateEndEditable -->
+
+    <!-- TemplateBeginEditable name="首页评论" -->
+    <!-- #BeginLibraryItem "/library/index_comments.lbi" --><!-- #EndLibraryItem -->
+    <!-- TemplateEndEditable -->
+</div>
+<!---->
+<!-- {else} -->
+
+<div class="major">
+	<div class="article_show">
+    <h3 style="display:none;">{$article.title|escape:html}</h3>
+    <div class="content clearfix">
+
+	<!--{if $content_easy == '1' }-->
+    <link rel="stylesheet" href="{$template_dir}/css/scroll_only.css" type="text/css" />
+	{insert_scripts files='jquery-1.4.2.min.js,lrtk.js'}
+<!--[if (IE 7)|(IE 8)]>
+	{insert_scripts files='PIE.js'}
+<![endif]-->
+    <div class="focus">
+        <ul class="rslides f958x558">
+        {$content_img}
+        </ul>
+    </div>
+	<script>
+	$(document).ready(function(){
+		$(".rslides > img").wrap("<li></li>");
+	});
+	</script>
+
+    <!--// scroll only code //-->
+	<!--{else}-->
+		<!-- {if $article.content } -->
+        {$article.content}
+		<!-- {/if} -->
+	<!--{/if}-->
+
+    </div>
+	</div>
+</div>
+
+<!-- {/if} -->
+
+
+<!--友情链接 start-->
+<!--{if $img_links  or $txt_links }-->
+  <div class="links clearfix">
+    <!--开始图片类型的友情链接{foreach from=$img_links item=link}-->
+    <a href="{$link.url}" target="_blank" title="{$link.name}"><img src="{$link.logo}" alt="{$link.name}" border="0" /></a>
+    <!--结束图片类型的友情链接{/foreach}-->
+    <!-- {if $txt_links} -->
+    <!--开始文字类型的友情链接{foreach from=$txt_links item=link}-->
+    [<a href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a>] 
+    <!--结束文字类型的友情链接{/foreach}-->
+    <!-- {/if} -->
+  </div>
+<!--{/if}-->
+<!--友情链接 end-->
+
+
+
+
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

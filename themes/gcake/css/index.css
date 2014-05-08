@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*轮播样式*/
+/*
+.mf_ind_ad{margin:0 auto; width:974px; height:542px; position:relative; }
+.mf_ind_ad a { position:absolute; z-index:20; display:none; }
+.mf_ind_ad .tagbg { width:974px; height:20px; background:#000; position:absolute; z-index:21; left:0; bottom:0; filter:alpha(opacity=70); opacity:0.7; }
+.mf_ind_ad .tag {  height:10px; position:absolute; bottom:5px; right:8px; z-index:22; }
+.mf_ind_ad .tag span { width:10px; height:10px; display:block; background:url(../images/ico1.png) no-repeat; float:left; margin-right:8px; cursor:pointer; }
+.mf_ind_ad .tag span.current{background:url(../images/ico2.png) no-repeat;}
+
+*/
+.lunbo{/* width:100%;height:541px;*/min-height:260px;background:#f2deb5;}
+.lunbo .mf_ind_ad{ position:relative; width:100%;/*height:541px;*/overflow:hidden; margin:0 auto;}
+.lunbo .mf_ind_ad ul.items{ position:absolute; float:left; list-style:none; padding:0px; margin:0px; width:100%}
+.lunbo .mf_ind_ad ul.items li{ float:left; list-style:none; padding:0px; margin:0px;/*height:541px;*/width:100%;text-align:center;overflow:hidden;}
+.lunbo .mf_ind_ad ul.items li img{padding:0px;margin:0px auto;width:1036px;}
+/*
+.lunbo .mf_ind_ad ul.items .li_1{background:url(../images_xin/lunbo1.jpg) no-repeat center top;}
+.lunbo .mf_ind_ad ul.items .li_2{background:url(../images_xin/lunbo2.jpg) no-repeat center top;}
+.lunbo .mf_ind_ad ul.items .li_3{background:url(../images_xin/lunbo3.jpg) no-repeat center top;}
+.lunbo .mf_ind_ad ul.items .li_4{background:url(../images_xin/lunbo4.jpg) no-repeat center top;}
+*/
+.lunbo .mf_ind_ad ul.items li a{display:block; /*width:100%;height:541px;*/  line-height:normal !important; padding:0px !important; border:none/*For IE.ADD.JENA.201206300844*/;}
+.lunbo .mf_ind_ad ul.items li a img{ margin:0px auto !important; padding:0px !important; display:block; border:none/*For IE.ADD.JENA.201206300844*/;}
+.lunbo .mf_ind_ad div.tips{ position:absolute; bottom:0px; width:100%; height:40px; overflow:hidden;}
+.lunbo .mf_ind_ad div.tips div.title{ position:absolute; left:0px; top:0px; height:100%;}
+.lunbo .mf_ind_ad div.tips div.title a{ color:#FFF; font-size:18px; line-height:40px; margin-left:10px; text-decoration:none;}
+.lunbo .mf_ind_ad div.tips div.title a:hover{ text-decoration:underline !important;}
+.lunbo .mf_ind_ad div.tips div.nums{ position:absolute; right:20px; top:0px; height:100%;}
+.mf_ind_ad div.tips div.nums a{ display:inline-block; >float:left/*For IE.ADD.JENA.201206300844*/; width:10px; height:10px; background-color:#FFF; text-indent:-99999px; margin:10px 10px 0px 0px;border:1px solid #f00;}
+.lunbo .mf_ind_ad div.tips div.nums a.active{ background-color:#f00;}
+
+/*循环播放*/
+.xuanhuan_out{width:100%; background:#f2deb5;}
+.xuanhuan{margin:0 auto; width:1034px; height:271px;background:#f8f3ed;border:1px solid #d1b482;}
+.xuanhuan .loop{float:left; height:271px; width:974px;}
+.xuanhuan .loop li{float:left;}
+.xuanhuan .loop li img{width:244px;height:274px;}
+.xuanhuan .next{float:left;width:28px;height:64px;padding:100px 0;}
+.xuanhuan .next span{display:block; width:28px; height:64px;background:url(../images_xin/index/jiantou_zuo.jpg) no-repeat;}
+.xuanhuan .prev{float:right;width:28px;height:64px;padding:100px 0;}
+.xuanhuan .prev span{display:block; width:28px; height:64px;background:url(../images_xin/index/jiantou_you.jpg) no-repeat;}
+

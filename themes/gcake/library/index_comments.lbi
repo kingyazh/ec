@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<!-- 最新评论__Begin -->       
+<div class="index_comments">
+	<h3>分享专区</h3>
+	<div class="comments clearfix">
+		<ul class="clearfix">
+		<!--{foreach from=$my_comments item=comments}-->
+			<li>
+			<a href="goods.php?id={$comments.id_value}" target="_blank"><span>{$comments.user_name|truncate:5:""}</span>：{$comments.content|truncate:20:""}</a>
+			</li>
+		<!--{/foreach}-->
+		</ul>
+	<div class="more">更多&gt;&gt;</div>
+	</div>
+</div>
+
+
+

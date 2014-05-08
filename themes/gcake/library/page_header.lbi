@@ -1,0 +1,105 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{insert_scripts files='jquery-1.9.0.min.js,jquery.json-2.4.min.js'}
+
+<div><!-- the body -->
+
+    <div class="header">
+        <div class="nav">
+            <div class="left logo"><a href="/"><img src="{$template_dir}/images_new/pmsj-logo.png"></a></div>
+            <div class="right left_header">
+                <div class="left_shang">
+                    <p id="loginStr" name="loginStr" class="txtRight">
+						<span class="right" style="display:none;"><a href="#" target="_blank">&nbsp;&nbsp;|&nbsp;&nbsp;去旧版品美四季</a></span>
+						{insert_scripts files='co/transport.js'}
+
+			<div class="right" id="ECS_CARTINFO">{insert name='cart_info'}&nbsp;&nbsp;</div>
+						
+						<!-- {if $smarty.session.user_id gt 0} -->
+						<span class="right">  <a href="user.php">{$lang.edit_user_info}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span class="right"> 欢迎您光临品美四季！&nbsp;<a href="user.php?act=logout">{$lang.label_logout}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<!-- {else} -->
+						<span class="right">  <a href="user.php?act=register" onclick="_gaq.push(['_trackEvent', 'Login(In Site)', 'Register']);">注册</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span class="right"> 欢迎您光临品美四季！&nbsp;<a href="user.php" onclick="_gaq.push(['_trackEvent', 'Login(In Site)', 'Login']);">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<!-- {/if} -->
+					</p>
+                    <p class="txtRight search_margin" style="clear:both;">
+						<span>订购热线</span>
+						<span class="numb">&nbsp;&nbsp;<!-- 客服电话{if $service_phone} -->{$service_phone}<!-- 结束客服电话{/if} --></span>
+					</p>
+                </div>
+                <div class="clear"></div>
+                <div class="left_xia">
+                    <div class="right nav_right lineH25">
+                        <p class="txtRight"><span>
+
+
+		<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()">
+			<select name="category" id="category" style="vertical-align:middle;display:none;">
+			  <option value="0">{$lang.all_category}</option>
+			  {$category_list}
+			</select>
+			<input name="keywords" type="text" class="input" id="keyword" value="{$search_keywords|escape}" />
+			<input type="submit" class="button" value="" />
+		  </form>
+						</span></p>
+                    </div>
+                    <div class="left nav_center">
+                        <ul class="test">
+                            <li><a href="index.php" style="border:none">首　页</a></li>
+
+							<!--{foreach from=$categories item=cat}-->
+							<li class="nav_xia"><a href="{$cat.url}">{$cat.name|escape:html}<img class="header_xia" src="{$template_dir}/images_new/header_xia.png"></a>
+									<!--{if $cat.parent == '0'}--><ul class="nav_xia_ul"><!--{/if}-->
+								<!--{foreach from=$cat.cat_id item=child}-->
+									<li><a href="{$child.url}">{$child.name|escape:html}</a></li>
+								<!--{/foreach}-->
+									<!--{if $cat.parent == '0'}--></ul><!--{/if}-->
+							</li>
+							<!--{/foreach}-->
+
+
+						  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+						  {if $nav.active eq 1}
+							<li class="current"><a href="{if $nav.name == $lang.new_active}{$new_group_goods}{else}{$nav.url}{/if}" {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a></li>
+						  {else}
+							<li><a href="{if $nav.name == $lang.new_active}{$new_group_goods}{else}{$nav.url}{/if}" {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a></li>
+						  {/if}
+						 <!-- {/foreach} -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        dropMenu(".nav_xia");
+    });
+    // 下拉菜单
+    function dropMenu(obj) {
+        jQuery(obj).each(function () {
+            var theSpan = jQuery(this);
+            var theMenu = theSpan.find(".nav_xia_ul");
+            var tarHeight = theMenu.height();
+            theMenu.css({ height: 0, opacity: 0 });
+            theSpan.hover(
+			function () {
+			    jQuery(this).find("img").attr("src", "{$template_dir}/images_new/header_xia2.png");
+			    theMenu.stop().show().animate({ height: tarHeight, opacity: 1 }, 400);
+			},
+			function () {
+			    jQuery(this).find("img").attr("src", "{$template_dir}/images_new/header_xia.png");
+			    theMenu.stop().animate({ height: 0, opacity: 0 }, 400, function () {
+			        jQuery(this).css({ display: "none" });
+			    });
+			}
+		);
+        });
+    }
+</script>
+
+
+

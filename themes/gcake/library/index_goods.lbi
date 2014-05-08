@@ -1,0 +1,29 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- {if $best_goods} -->
+<!--loop -->
+<div class="xuanhuan_out">
+    <div class="xuanhuan">
+        <a href="javascript:void(0);" class="next"><span></span></a>
+        <div class="loop">
+            <ul>
+                <!--{foreach from=$best_goods item=goods}-->
+                <li style="overflow:hidden;width:244px;height:274px;">
+                    <a href="{$goods.url}">
+                        <!--{foreach from=$goods.goods_pics item=goods_pics}-->
+                        <!--{if $goods_pics.img_desc == 'best'}-->
+                        <img src="{$goods_pics.img_url}" alt="{$goods_pics.img_desc|escape:html}" />
+                        <!--{/if}-->
+                        <!--{/foreach}-->
+                        <img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+                    </a>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="prev"><span></span></a>
+    </div>
+</div>
+<!--loop 结束-->
+<!-- {/if} -->
+

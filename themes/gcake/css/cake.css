@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*cake分类*/
+.cake{width:100%; height:auto; background:#fbfae5; color:#241c15;}
+.cake .content{width:990px; margin:0 auto; height:auto; min-hight:500px;}
+.cake .content .mulu{line-height:30px; padding-top:60px; }
+.cake .content .mulu a{color:#241c15;}
+.cake .content .mulu .span{width:120px; height:15px;}
+.cake .content .mulu .span .datu{background:url(../images_xin/cake1/liebia_datu.png) no-repeat; width:46px; height:15px; display:block; line-height:15px;}
+.cake .content .mulu .span .xiaotu{background:url(../images_xin/cake1/liebia_xiaotu.png) no-repeat; width:50px; height:15px; display:block; line-height:15px;}
+.cake .content .pro_content{height:160px; border-bottom:#241c15 1px solid; padding-bottom:8px;}
+.cake .content .pro_content .w615{ width:615px;}
+.cake .content .pro_content .w172{ width:172px;}
+.cake .content .pro_content  .h90{height:80px; margin-top:10px; color:#666;}
+.cake .content .pro_content a{color:#000}
+.cake .content .pro_content .cake_img{float:left; height:140px; width:180px; padding-top:20px; position:relative;}
+.cake .content .pro_content .cake_img img{ width:135px;}
+.cake .content .pro_content .cake_name{float:left; height:160px; width:788px;}
+.cake .content .pro_content .cake_name .price{ color:#c72844; font-size:16px;}
+.cake .content .pro_content .cake_name .name1{font-size:16px; line-height:25px; height:25px; padding-top:20px; color:#999;}
+.cake .content .pro_content .cake_name .name2{margin-top:5px; height:40px; line-height:40px;}
+
+.cake .num{text-align:center; height:65px; line-height:30px; padding-top:15px;}
+.cake .num a{color:#241c15;}
+.cake .num a:hover{ color:#ca9b3b;}
+.cake .num a:visited{color:#f00}
+.button_width{width:110px; height:30px;}

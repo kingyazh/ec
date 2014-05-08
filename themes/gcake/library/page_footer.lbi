@@ -1,0 +1,43 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<div class="footer">
+  <div class="content">
+    <div class="padT20 lineH20 first">
+      <p class="left padR20 p1">北京五环内免费<br>
+        送货订购热线：<!-- 客服电话{if $service_phone} -->{$service_phone}<!-- 结束客服电话{/if} --></p>
+      <p class="left marL20 p2">
+		<!-- ICP 证书{if $icp_number} -->
+			<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a>
+		<!-- 结束ICP 证书{/if} -->  
+	  </p>
+    </div>
+    <div class="second">
+<!--底部导航 start-->
+<p class="left p1">
+   <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+        <!-- {if $smarty.foreach.nav_bottom_list.iteration == 4} -->
+			</p><p class="right p2">
+        <!-- {/if} -->
+		<!-- {if !$smarty.foreach.nav_bottom_list.last && $smarty.foreach.nav_bottom_list.iteration != 4} --> - <!-- {/if} -->
+      <!-- {/foreach} -->
+  <!-- {/if} -->
+</p>
+<!--底部导航 end-->
+    </div>
+
+	<p class="c_r">Copyright &copy 2012-2013 北京品美四季电子商务有限公司 版权所有</p>
+  </div>
+</div>
+
+
+
+
+
+
+</div><!-- // the body -->
+
+
+

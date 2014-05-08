@@ -1,0 +1,41 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $related_goods} -->
+
+<div class="may_like">
+    <h5>你可能会喜欢 You may like...</h5>
+    <div class="btn_left" id="LeftArr">
+        <a onmouseover="this.style.backgroundImage='url(themes/mensa/images/keyvisual_array_left_ov.png)';" onmouseout="this.style.backgroundImage='url(themes/mensa/images/keyvisual_array_left_off.png)';" href="javascript:leftView();"></a>
+    </div>
+    <div class="items" id="ISL_Cont_1">
+        <!--{foreach from=$related_goods item=releated_goods_data}-->
+        <a href="{$releated_goods_data.url}">
+            <img src="{$releated_goods_data.goods_thumb}" alt="{$releated_goods_data.goods_name}" />
+        </a>
+        <!--{/foreach}-->
+    </div>
+    <div class="btn_right" id="RightArr">
+        <a onmouseover="this.style.backgroundImage='url(themes/mensa/images/keyvisual_array_right_ov.png)';" onmouseout="this.style.backgroundImage='url(themes/mensa/images/keyvisual_array_right_off.png)';" href="javascript:rightView();"></a>
+    </div>
+</div>
+
+
+<!-- scroll pics part -->
+<SCRIPT language=javascript type=text/javascript>
+    var scrollPic_02 = new ScrollPic();
+    scrollPic_02.scrollContId   = "ISL_Cont_1"; //内容容器ID
+    scrollPic_02.arrLeftId      = "LeftArr";//左箭头ID
+    scrollPic_02.arrRightId     = "RightArr"; //右箭头ID
+
+    scrollPic_02.frameWidth     = 690;//显示框宽度
+    scrollPic_02.pageWidth      = 230; //翻页宽度
+
+    scrollPic_02.speed          = 10; //移动速度(单位毫秒，越小越快)
+    scrollPic_02.space          = 10; //每次移动像素(单位px，越大越快)
+    scrollPic_02.autoPlay       = false; //自动播放
+    scrollPic_02.autoPlayTime   = 3; //自动播放间隔时间(秒)
+
+    scrollPic_02.initialize(); //初始化
+</SCRIPT>
+<!-- end, scroll pics part -->
+
+<!-- {/if} -->

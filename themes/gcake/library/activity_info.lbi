@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<div class="activity_lib clearfix">
+    <div class="act_txt">
+        <dl>
+            <dt>活动细则</dt>
+            <dd>
+				<!-- {if $gb_list} 如果有团购活动 -->
+				<!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
+					<!-- {if $group_buy.end_date > $now_time && $group_buy.end_date <= $tomrrow_time} 显示今天的团购 -->
+					{$group_buy.act_desc}
+					<!--{/if} 显示今天的团购-->
+				<!--{/foreach}-->
+				<!--{else}-->
+                <span>1、</span>每天限量 150 磅拿破仑系列蛋糕，售完即止。<br>
+                <span>2、</span>每单限购 1 个现有规格（1 磅、2 磅、3 磅、5 磅）的拿破仑蛋糕。<br>
+                <span>3、</span>固定节日或特殊节庆适当调整蛋糕限量磅数。<br>
+                <span>4、</span>北京四环以内免费送货，五环外暂不送货。<br>
+                <span>5、</span>订购 5 磅以上规格的蛋糕请与客服人员联系，订购电话：400 100 3297
+				<!--{/if}-->
+            </dd>
+        </dl>
+    </div>
+    <div class="bought_record">
+		<!-- #BeginLibraryItem "/bought_note_guide.lbi" -->
+		{insert_scripts files='co/transport.js,utils.js'}
+		<div id="ECS_BOUGHT">{* ECSHOP 提醒您：动态载入bought_notes.lbi，显示当前商品的购买记录 *}{insert name='bought_notes' id=$id}</div>
+		<!-- #EndLibraryItem -->
+    </div>
+</div>
+
+

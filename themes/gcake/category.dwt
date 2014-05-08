@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{$template_dir}/css/global.css" type="text/css" />
+<link rel="stylesheet" href="{$template_dir}/css/cake1.css" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='co/common.js,co/global.js,jquery-1.7.2.min.js,jquery.json-2.4.min.js,co/compare.js,date/WdatePicker.js'}
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="cake1">
+	<div class="content">
+		<div class="mulu">
+			<span class="left">
+			<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+			</span>
+			<span class="span right marT10">
+				<form method="GET" class="sort" name="listform">
+					<a href="javascript:;" onClick="javascript:display_mode('grid')" class="datu left">大图</a>
+					<a href="javascript:;" onClick="javascript:display_mode('list')" class="xiaotu right">列表</a>
+					<input type="hidden" name="category" value="3" />
+					<input type="hidden" name="display" value="list" id="display" />
+					<input type="hidden" name="brand" value="0" />
+					<input type="hidden" name="price_min" value="0" />
+					<input type="hidden" name="price_max" value="0" />
+					<input type="hidden" name="filter_attr" value="0" />
+					<input type="hidden" name="page" value="1" />
+					<input type="hidden" name="sort" value="goods_id" />
+					<input type="hidden" name="order" value="DESC" />
+				</form>
+			</span>
+		</div>
+		
+
+
+{insert_scripts files='co/transport.js'}
+<!-- TemplateBeginEditable name="商品列表" -->
+  <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->
+  <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+	</div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+
+</body>
+</html>

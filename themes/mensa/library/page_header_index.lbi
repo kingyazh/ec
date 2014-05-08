@@ -1,0 +1,52 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+<div class="body_M"><!-- the body -->
+
+
+<div class="header">
+    <a class="link_logo" href="index.php">&nbsp;</a>
+	<ul class="clearfix">
+		<li>
+		<!-- {if $smarty.session.user_id gt 0} -->
+		<a href="user.php?act=logout">{$lang.label_logout}</a>
+		<!-- {else} -->
+		<a href="user.php" onclick="_gaq.push(['_trackEvent', 'Login(In Site)', 'Login']);">登录</a> / <a href="user.php?act=register" onclick="_gaq.push(['_trackEvent', 'Login(In Site)', 'Register']);">注册</a>
+		<!-- {/if} -->
+		</li>
+		<li><a href="user.php?act=order_list">我的订单</a></li>
+		<li class="cart_ico">
+			{insert_scripts files='transport.js'}
+			<div id="ECS_CARTINFO">{insert name='cart_info'}</div>
+		</li>
+		<li><a href="#">门店介绍</a></li>
+		<li><a target="_blank" href="http://weibo.com/u/3233356640"><img src="../images/weibo_a.png" /></a></li>
+	</ul>
+</div>
+
+<!--// start header nav //-->
+<div class="top_nav">
+	<ul>
+
+	<li class="current">{$lang.home}</li>
+
+	  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+	  {if $nav.active eq 1}
+		<li class="current" style="display:none;"><a href="{if $nav.name == $lang.new_active}{$new_group_goods}{else}{$nav.url}{/if}" {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a></li>
+		<li class="current"><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a></li>
+	  {else}
+		<li style="display:none;"><a href="{if $nav.name == $lang.new_active}{$new_group_goods}{else}{$nav.url}{/if}" {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a></li>
+		<li><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} >{$nav.name}</a></li>
+	  {/if}
+	 <!-- {/foreach} -->
+	
+	<li class="hot_phone">订购热线<b>400 100 3297</b></li>
+	</ul>
+</div>
+<!--// end header nav //-->
+
+
+
+
+

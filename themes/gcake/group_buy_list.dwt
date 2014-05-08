@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="{$keywords}" />
+    <meta name="Description" content="{$description}" />
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>{$page_title}</title>
+    <!-- TemplateEndEditable -->
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="animated_favicon.gif" type="image/gif" />
+    <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{$template_dir}/css/global.css" type="text/css" />
+    {* 包含脚本文件 *}
+    {insert_scripts files='co/common.js,jquery-1.10.1.min.js,jquery.json-2.4.min.js,jquery.json-2.4.min.js'}
+
+    <style type="text/css">
+        .hide {display:none;}
+        .show {display:'';}
+    </style>
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+
+
+<!--right start-->
+<div class="major">
+    <!--{$_CFG}-->
+    <!-- TemplateBeginEditable name="右边通栏广告（宽750px）" -->
+    <!-- TemplateEndEditable -->
+
+
+
+    <!-- {if $gb_list} 如果有团购活动 -->
+    <!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
+
+	<p style="display:none;">{$group_buy.formated_end_date}--{$now_time}--{$tomrrow_time}</p>
+    <!-- {if $group_buy.end_date > $now_time && $group_buy.end_date <= $tomrrow_time} 显示今天的团购 -->
+    <div class="groupon_show">
+        <dl>
+            <dt>手工限量{$group_buy.goods_name|escape:html}<b>{$group_buy.restrict_amount}</b>磅/天</dt>
+            <dd>名额有限，先到先得。每天<!--{if $group_buy.formated_start_am == 'am'}-->上午<!--{else}-->下午<!--{/if}--><span>{$group_buy.formated_start_time}</span>点开始，赶紧来电<b>400 100 3297</b>抢先订购吧！</dd>
+        </dl>
+        <div><a href="{$group_buy.url}"><img src="{$group_buy.img_url}" /></a></div>
+    </div>
+    <!--{/if} 显示今天的团购-->
+
+    <!--{/foreach}-->
+
+    <div class="groupon_other">
+        <ul>
+            <!-- {foreach from=$gb_list item=group_buy name="groupon_buy"} 循环团购活动开始 -->
+
+            <!--{if $group_buy.end_date >= $this_mon || $group_buy.end_date <= $next_mon}-->
+            <!--{if $smarty.foreach.groupon_buy.iteration > 7}-->
+            <li style="display:none;" id="{$smarty.foreach.groupon_buy.iteration}" <!-- {if $group_buy.end_date > $now_time && $group_buy.end_date <= $tomrrow_time} 显示今天的团购 -->class="current"<!--{/if}-->>
+                <!--{else}-->
+            <li id="{$smarty.foreach.groupon_buy.iteration}" <!-- {if $group_buy.end_date > $now_time && $group_buy.end_date <= $tomrrow_time} 显示今天的团购 -->class="current"<!--{/if}-->>
+                <!--{/if}-->
+                <p class="clearfix">
+                    <b>{$group_buy.formated_end_day}</b>
+                    <!--{if $group_buy.end_date < $now_time || $group_buy.is_finished == 3}-->
+                    售罄<br>Sold Out
+                    <!--{else}-->
+                    <a href="{$group_buy.url}"><i>{$group_buy.restrict_amount}</i>磅<br>
+                        On Selling
+                    </a>
+                    <!--{/if}-->
+                </p>
+                <p class="weekday">
+                    {$group_buy.formated_end_week}
+                </p>
+                <p style="display:none;">
+                    <!-- {foreach from=$group_buy.price_ladder item=item} -->
+                    {$item.amount}<br>{$item.formated_price}<br>{$item.restrict_amount}
+                    <!-- {/foreach} -->
+                </p>
+            </li>
+            <!--{/if}-->
+            <!--{/foreach}-->
+        </ul>
+
+
+		<!-- {foreach from=$gb_list item=group_buy name="groupon_buy"} 循环团购活动开始 -->
+		<!--{if $smarty.foreach.groupon_buy.iteration == 7}-->
+		<div class="show_all"><a href="javascript:void(0);">{$group_buy.formated_start_day} ~ {$group_buy.formated_end_day} &lt; 点击查看全部</a></div>
+		<!--{/if}-->
+		<!--{/foreach}-->
+		<div class="all_date">
+		<!-- {foreach from=$gb_list item=group_buy name="groupon_buy"} 循环团购活动开始 -->
+		<!--{if $smarty.foreach.groupon_buy.iteration % 7 == 0}-->
+			<a href="javascript:;" onclick="show_group('{$smarty.foreach.groupon_buy.iteration}')">
+				<b>
+				{$group_buy.formated_start_day} ~ 
+				
+				<!--{if $group_buy.formated_start_day > $group_buy.formated_end_day}-->
+				{$group_buy.formated_end_d_M}.
+				<!--{else}-->
+				{$group_buy.formated_end_day}.
+				<!--{/if}-->
+				</b>
+			</a>
+		<!--{/if}-->
+		<!--{/foreach}-->
+		</div>
+
+    </div>
+
+
+
+    <!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
+
+<!-- {if $group_buy.end_date > $now_time && $group_buy.end_date <= $tomrrow_time} 显示今天的团购 -->
+<div class="activity_lib clearfix">
+    <div class="act_txt">
+        <dl>
+            <dt>活动细则</dt>
+            <dd>
+                {$group_buy.act_desc}
+            </dd>
+        </dl>
+    </div>
+    <div class="bought_record">
+		<!-- #BeginLibraryItem "/bought_note_guide.lbi" -->
+		{insert_scripts files='co/transport.js,utils.js'}
+		<div id="ECS_BOUGHT">{* ECSHOP 提醒您：动态载入bought_notes.lbi，显示当前商品的购买记录 *}{insert name='bought_notes' id=$id}</div>
+		<!-- #EndLibraryItem -->
+    </div>
+</div>
+<!--{/if} 显示今天的团购-->
+
+    <!--{/foreach}-->
+    <!-- {else} -->
+    <span style="margin:2px 10px; font-size:14px; line-height:36px;">{$lang.group_goods_empty}</span>
+    <!-- {/if} -->
+
+
+</div>
+<!--right end-->
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
+
+
+
+<script type="text/javascript">
+    $(function(){
+        var i = 1;
+        var $i = i++;
+        $(".groupon_other").find("ul").children().eq(7*$i).addClass('tmpExample');
+
+    });
+
+
+    function show_group(id) {
+        var id = parseInt(id)
+        var start = id<7?1:id-7;
+        var end = id;
+        $('div.groupon_other ul li').hide();
+        $('div.groupon_other ul li').each(function(){
+            var sid = $(this).attr('id');
+            //console.log('-----' + id)
+            if(sid>start && sid <= end) {
+                //console.log("===hide " + sid)
+                $(this).show();
+            }
+
+
+        });
+
+        //var obj = $('div.groupon_other ul li')[0];
+        //$(obj).css("hide")
+    }
+
+$(document).ready(function(){   
+    // 隐藏和显示的切换
+    $(".show_all").click(function(){
+        $(".all_date").toggle();
+    });
+});
+
+</script>

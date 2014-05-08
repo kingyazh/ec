@@ -1,0 +1,79 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="{$template_dir}/css/scroll-show.css" rel="stylesheet" type="text/css" />
+
+	
+
+<div id="headerShow">
+<div id="content_p2">
+<!-- ########## Main Key Visual ########## START-->
+{insert_scripts files='keyvisual.js'}
+<SCRIPT type="text/javascript">
+	//<![CDATA[
+		var list_keyvisualimg = new Array();
+		var list_gnbtxt = new Array();
+
+		{foreach from=$playerdb item=item key=key name=help_list}
+		{if $item.img_desc == ''}
+		list_keyvisualimg[{$smarty.foreach.help_list.index}] = '<a href="{$item.url}" target="_blank"><img src="{$item.src}" width="958" height="410" alt="{$item.img_desc}"></a>';
+		list_gnbtxt[{$smarty.foreach.help_list.index}] = 'gnb_black';
+		{/if}
+		{/foreach}
+
+
+
+	//]]>	
+	</SCRIPT>
+
+<div class="mainkeyvisual">
+	<div class="keyvisualimage" id="keyvisualimage"></div>
+	<div class="keyvisualimage" id="keyvisualimage2"></div>
+		<div class="btn_left" id="btn_left">
+		<A onmouseover="this.style.backgroundImage='url({$template_dir}/images/keyvisual_array_left_ov.png)';" onmouseout="this.style.backgroundImage='url({$template_dir}/images/keyvisual_array_left_off.png)';" href="javascript:leftView();"></A>
+		</div>
+
+		<div class="btn_right" id="btn_right">
+		<A onmouseover="this.style.backgroundImage='url({$template_dir}/images/keyvisual_array_right_ov.png)';" onmouseout="this.style.backgroundImage='url({$template_dir}/images/keyvisual_array_right_off.png)';" href="javascript:rightView();"></A>
+		</div>
+	<div class="pagelist" id="keyvisual_page" style="display:none;"></div>
+</div>
+<SCRIPT type="text/javascript">
+	//<![CDATA[
+				var keyControl = new keyVisualView (list_keyvisualimg,list_gnbtxt,"headerShow","keyvisualimage","keyvisualimage2","keyvisual_page",0);
+				/* keyvisualAutoPlay */
+				if(list_keyvisualimg.length > 1){
+					keyvisualAutoPlay();
+				}
+				/* -- keyvisualAutoPlay */
+				function leftView(){
+					keyControl.leftView();
+				};
+				function rightView(){
+					keyControl.rightView();
+				};
+				function selectView(num){
+					keyControl.selectView(num);
+				};
+	//]]>		
+	</SCRIPT>
+<!-- ########## Main Key Visual ########## END-->
+</div>
+</div>
+
+
+
+
+<!--// start big pictures loop //-->
+
+<!--// end big pictures loop //-->
+
+
+
+
+
+
+
+
+
+
+

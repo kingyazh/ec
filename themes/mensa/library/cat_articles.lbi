@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--{if $curpage == "/index.php"}-->
+
+
+		<!--{foreach from=$articles item=article_item}-->
+		<!--{if $article_item.file_url neq ""}-->
+		<li>
+			{if $article_item.short_title == $lang.new_active}
+			<div style="display:none;">
+			<a class="title" href="{$new_group_goods}">{$article_item.short_title}</a>
+			<a class="more" href="{$new_group_goods}">more &gt;</a>
+			<a href="{$new_group_goods}"><img src="{$article_item.file_url}" /></a>
+			</div>
+
+			<a class="title" href="{$article_item.url}">{$article_item.short_title}</a>
+			<a class="more" href="{$article_item.url}">more &gt;</a>
+			<a href="{$article_item.url}"><img src="{$article_item.file_url}" /></a>
+			{else}
+			<a class="title" href="{$article_item.url}">{$article_item.short_title}</a>
+			<a class="more" href="{$article_item.url}">more &gt;</a>
+			<a href="{$article_item.url}"><img src="{$article_item.file_url}" /></a>
+			{/if}
+		</li>
+		<!--{elseif $article_item.title == '关于门客（MENSACAKE）'}-->
+		<div class="index_mensa">
+			<dl>
+				<dt>{$article_item.title}</dt>
+				<dd>
+				{$article_item.content}
+				</dd>
+			</dl>
+		</div>
+		<!--{/if}-->
+
+		<!--{/foreach}-->
+
+
+<!--{else}-->
+<div class="pic_menu">
+  <span><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></span>
+
+  <!--{foreach from=$articles item=article_item}-->
+  <a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title}</a> {$article_item.add_time}<br />
+  <!--{/foreach}-->
+</div>
+<!--{/if}-->

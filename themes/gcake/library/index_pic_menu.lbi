@@ -1,0 +1,36 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--{if $curpage == "/index.php"}-->
+
+<div class="pic_menu">
+	<ul class="clearfix">
+		<li>
+			<a class="title" href="/group_buy.php">{$lang.now_recommend}</a>
+			<a class="more" href="/group_buy.php">more &gt;</a>
+			<a href="/group_buy.php"><img src="../images/index-a-s.png" /></a>
+		</li>
+		<li>
+			<a class="title" href="">{$lang.new_active}</a>
+			<a class="more" href="">more &gt;</a>
+			<a href=""><img src="../images/index-b-s.png" /></a>
+		</li>
+		<li>
+			<a class="title" href="">{$lang.about_mensa}</a>
+			<a class="more" href="">more &gt;</a>
+			<a href=""><img src="../images/index-c-s.png" /></a>
+		</li>
+	</ul>
+</div>
+<!--{else}-->
+<div class="pic_menu">
+	<ul class="clearfix">
+		<li><a href=""><img src="../images/store-a-s.png" /></a></li>
+		<li><a href=""><img src="../images/store-b-s.png" /></a></li>
+		<li><a href=""><img src="../images/store-c-s.png" /></a></li>
+	</ul>
+</div>
+<!--{/if}-->
+
+
+
+

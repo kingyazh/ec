@@ -1,0 +1,17 @@
+
+.focus{width:958px;height:558px;border:1px solid #A08131;position:relative;margin-top:0px;float:left;z-index:1;}
+.f958x558{width:958px;height:558px;overflow:hidden}
+.f958x558 img{width:958px;height:558px}
+
+.rslides{width:100%;position:relative;list-style:none;padding:0;z-index:1;}
+.rslides_nav{height:80px;width:88px;position:absolute;-webkit-tap-highlight-color:rgba(0,0,0,0);top:70%;left:0;opacity:0.5;/*background:url(../images/keyvisual_array_left_ov.png) no-repeat 0 -0px;*/margin-top:-28px;z-index:5;text-indent:-9999px;overflow:hidden;text-decoration:none;}
+.rslides_nav:active{opacity:1.0}
+.next{left:auto;/*background:url(../images/keyvisual_array_right_ov.png) no-repeat 0 -0px;*/right:0}
+.rslides_tabs{padding:12px auto;clear:both;text-align:center;position:absolute;left:48%;bottom:40px;z-index:15;}
+.rslides_tabs li{float:left;margin-right:8px;width:10px;height:10px;line-height:2px;border:1px solid #999;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;behavior:url('themes/mensa/css/PIE.htc')!important;}
+.rslides_tabs a{text-indent:-9999px;overflow:hidden;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;background:rgba(0,0,0, .2);background:#DDD;display:inline-block;_display:block;*display:block;width:10px;height:10px;behavior:url('themes/mensa/css/PIE.htc')!important;}
+.rslides_tabs .rslides_here a{background:rgba(0,0,0, .6);background:#999}
+
+
+.rslides1_on{z-index:2;}
+

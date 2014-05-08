@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mulu{line-height:30px; padding-top:60px; height:30px;}
+.mulu a{color:#241c15;}
+.mulu .span{width:120px; height:15px;}
+.mulu .span .datu{background:url(../images_xin/datu.png) no-repeat; width:46px; height:15px; display:block; line-height:15px;}
+.mulu .span .xiaotu{background:url(../images_xin/xiaotu.png) -3px 0px no-repeat; width:50px; height:15px; display:block; line-height:15px;}
+.cake1{width:100%; background:#fbfae5; color:#241c15; height:auto;}
+.cake1 .content{width:990px; margin:0 auto;}
+.cake1 .content .list{padding-top:40px; height:auto;}
+.cake1 .content .good_list{width:1100px;overflow:hidden;}
+.cake1 .content .list li{width:305px; height:370px; text-align:center; float:left; border-bottom:#000 1px solid; margin-bottom:20px; position:relative;}
+.cake1 .content .list li img{width:240px;height:240px;}
+.cake1 .content .list li a{ color:#000}
+.cake1 .content .list li .font{font-size:16px;}
+.cake1 .content .list li .a_liji{background:url(../images_xin/cake1/cake_liji.jpg) no-repeat; cursor:pointer; width:113px; height:32px; display:block;}
+.cake1 .content .list li p{white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden; color:#666;}
+.cake1 .content .list li p.lineH60{height:50px;line-height:1.4em;padding:12px 0 0;word-wrap:break-word;word-break:normal;white-space:normal;}
+.cake1 .content .list li .p1{font-size:16px; color:#000;}
+.cake1 .content .list li .p2{line-height:40px; color:#000;}
+.cake1 .content .list li .span1{padding-right:10px; float:right;}
+.cake1 .content .list li .span1 a{color:#B2914E;}
+.cake1 .content .list li .p3{ border-top:#000 1px solid;}
+.cake1 .content .list li .p3 img{ height:11px;}
+
+.cake1 .content .pro_content{height:160px; border-bottom:#241c15 1px solid; padding-bottom:8px;}
+.cake1 .content .pro_content .w615{ width:615px;}
+.cake1 .content .pro_content .w172{ width:172px;}
+.cake1 .content .pro_content  .h90{height:80px; margin-top:10px; color:#666;}
+.cake1 .content .pro_content a{color:#000}
+.cake1 .content .pro_content .cake_img{float:left; height:140px; width:180px; padding-top:20px; position:relative;}
+.cake1 .content .pro_content .cake_img img{ width:135px;}
+.cake1 .content .pro_content .cake_name{float:left; height:160px; width:788px;}
+.cake1 .content .pro_content .cake_name .price{ color:#c72844; font-size:16px;}
+.cake1 .content .pro_content .cake_name .name1{font-size:16px; line-height:25px; height:25px; padding-top:20px; color:#999;}
+.cake1 .content .pro_content .cake_name .name2{margin-top:5px; height:40px; line-height:40px;}
+
+.cake1 .num{text-align:center; height:65px; line-height:30px; padding-top:15px;}
+.cake1 .num span{display:inline-block;padding:0 5px;color:#241c15;}
+.cake1 .num span.page_now{color:#999999;}
+.cake1 .num a{display:inline-block;padding:0 5px;color:#241c15;}
+.cake1 .num a:hover{ color:#ca9b3b;}
+.cake1 .num a:visited{ color:#000}
+
+.button_width{width:110px; height:30px;}

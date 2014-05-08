@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<div class="activity_lib clearfix">
+    <div class="act_txt">
+        <dl>
+            <dt>活动细则</dt>
+            <dd>
+				<!-- {if $gb_list} 如果有团购活动 -->
+				<!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
+					<!-- {if $group_buy.end_date > $now_time && $group_buy.end_date <= $tomrrow_time} 显示今天的团购 -->
+					{$group_buy.act_desc}
+					<!--{/if} 显示今天的团购-->
+				<!--{/foreach}-->
+				<!--{else}-->
+                <span>1、</span>试营业期间所有蛋糕限量供应，售完即止。<br>
+                <span>2、</span>法定节假日期间配送请提前与客服人员联系。<br>
+                <span>3、</span>北京市四环以内免费送货，四环外加收35元配送费，五环外暂不送货。<br>
+                <span>4、</span>订购5磅以上特殊规格蛋糕请与客服人员联系。<br>
+                <span>5、</span>咨询电话：400 100 3297。
+				<!--{/if}-->
+            </dd>
+        </dl>
+    </div>
+    <div class="bought_record">
+		<!-- #BeginLibraryItem "/bought_note_guide.lbi" -->
+		{insert_scripts files='transport.js,utils.js'}
+		<div id="ECS_BOUGHT">{* ECSHOP 提醒您：动态载入bought_notes.lbi，显示当前商品的购买记录 *}{insert name='bought_notes' id=$id}</div>
+		<!-- #EndLibraryItem -->
+    </div>
+</div>
+
+

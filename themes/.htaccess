@@ -1,0 +1,28 @@
+SetEnvIfNoCase Referer "^http://www\.pinmeisiji\.com/" local_ref=1
+SetEnvIfNoCase Referer "^http://pinmeisiji\.com/" local_ref=1
+SetEnvIfNoCase Referer "^http://118\.244\.232\.171/" local_ref=1
+SetEnvIfNoCase Referer "^http://crazymanguo\.gotoip2\.com/" local_ref=1
+<FilesMatch "\.(htm)">
+Order Allow,Deny
+Allow from env=local_ref
+Allow from 127.0.0.1
+#Allow from 118.244.232.171
+</FilesMatch>
+
+<FilesMatch "\.(dwt)">
+Order Allow,Deny
+Allow from env=local_ref
+Allow from 127.0.0.1
+#Allow from 118.244.232.171
+</FilesMatch>
+
+<FilesMatch "\.(lbi)">
+Order Allow,Deny
+Allow from env=local_ref
+Allow from 127.0.0.1
+#Allow from 118.244.232.171
+</FilesMatch>
+
+
+
+

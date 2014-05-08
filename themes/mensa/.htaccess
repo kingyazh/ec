@@ -1,0 +1,23 @@
+SetEnvIfNoCase Referer "^http://www\.mensacake\.com/" local_ref=1
+SetEnvIfNoCase Referer "^http://mensacake\.com/" local_ref=1
+SetEnvIfNoCase Referer "^http://60\.247\.57\.206/" local_ref=1
+<FilesMatch "\.(htm)">
+Order Allow,Deny
+Allow from env=local_ref
+Allow from 127.0.0.1
+#Allow from 60.247.57.206
+</FilesMatch>
+
+<FilesMatch "\.(dwt)">
+Order Allow,Deny
+Allow from env=local_ref
+Allow from 127.0.0.1
+#Allow from 60.247.57.206
+</FilesMatch>
+
+<FilesMatch "\.(lbi)">
+Order Allow,Deny
+Allow from env=local_ref
+Allow from 127.0.0.1
+#Allow from 60.247.57.206
+</FilesMatch>
