@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><bcaster><item item_url="data/afficheimg/20140102uswbcs.png" link="http://www.mensacake.com" text="功能测试" sort="0" kind="" src_bg="data/afficheimg/20140102uswbcs_bg.png"/><item item_url="data/afficheimg/20130510wikrsd.png" link="http://www.mensacake.com" text="3333333333333333333333" sort="0" kind="1" src_bg="0"/><item item_url="data/afficheimg/20130510imlspa.png" link="http://www.mensacake.com" text="222222222222222" sort="0" kind="2" src_bg="0"/><item item_url="data/afficheimg/20140102xfqmhm.png" link="http://www.mensacake.com" text="电影" sort="0" kind="" src_bg="data/afficheimg/20140102xfqmhm_bg.png"/></bcaster>
+<?xml version="1.0" encoding="utf-8"?>
+<bcaster>
+    <item item_url="data/afficheimg/20140104uvtdma.jpg" link="http://www.mensacake.com/goods.php?id=59" text="千层" sort="1" kind=""/>
+    <item item_url="data/afficheimg/20140104sxbyfy.jpg" link="http://www.mensacake.com" text="泡芙" sort="2" kind=""/>
+    <item item_url="data/afficheimg/20140104aiaeod.JPG" link="http://www.mensacake.com" text="榴莲" sort="3" kind=""/>
+    <item item_url="data/afficheimg/20130808gkyobw.jpg" link="http://www.mensacake.com/goods.php?id=41" text="经典拿破仑" sort="5" kind=""/>
+    <item item_url="data/afficheimg/20140105bsyuve.jpg" link="http://www.mensacake.com" text="门店" sort="6" kind=""/>
+</bcaster>

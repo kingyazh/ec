@@ -1,37 +1,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-
-<script type="text/javascript" src="{$template_dir}/js/jcarousellite_1.0.1.js"></script>
 <script type="text/javascript" src="{$template_dir}/js/jquery.slideBox.min.js"></script>
 <script type="text/javascript">
     // 轮播
     jQuery(function($){
-        $('#demo').slideBox({
+        var showPics="#showpics";
+        $(showPics).slideBox({
             direction: 'left', //left,top#方向
             duration: 0.8, //滚动持续时间，单位：秒
             easing: 'swing', //swing,linear//滚动特效
-            startIndex: 1//初始焦点顺序
-        });
-    });
-</script>
-<script type="text/javascript">
-    jQuery(document).ready(function(){
-        // LOOP
-        $(".loop").jCarouselLite({
-            btnNext: ".next",
-            btnPrev: ".prev",
-            auto: 3000,
-            speed: 800
+            startIndex: 1,//初始焦点顺序
+            width : 900,
+            height : 400,
+            width100Proc:1
         });
     });
 </script>
 <!-- header B-->
 <!--轮播-->
 <div class="lunbo">
-    <div class="mf_ind_ad" id="demo">
+    <div class="mf_ind_ad" id="showpics">
         <ul class="items">
-
-
             <!--{foreach from=$playerdb item=item key=key name=show_list}-->
             
             <li class="li_{$smarty.foreach.show_list.iteration}"{if $item.src_bg !="" && $item.src_bg !="0"} style="background:url({$item.src_bg});"{/if}>

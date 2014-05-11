@@ -18,10 +18,10 @@
    <!-- {if $navigator_list.bottom} -->
    <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
         <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
-        <!-- {if $smarty.foreach.nav_bottom_list.iteration == 4} -->
+        <!-- {if $smarty.foreach.nav_bottom_list.iteration == 2} -->
 			</p><p class="right p2">
         <!-- {/if} -->
-		<!-- {if !$smarty.foreach.nav_bottom_list.last && $smarty.foreach.nav_bottom_list.iteration != 4} --> - <!-- {/if} -->
+		<!-- {if !$smarty.foreach.nav_bottom_list.last && $smarty.foreach.nav_bottom_list.iteration != 2} --> - <!-- {/if} -->
       <!-- {/foreach} -->
   <!-- {/if} -->
 </p>

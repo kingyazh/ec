@@ -1,10 +1,3 @@
-<!--    <link type="text/css" rel="stylesheet" href="css/style.css">-->
-<!--[if IE 7]>
-<link href="css/style_ie7.css" rel="stylesheet" type="text/css"/>
-<![endif]-->
-<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700">
-<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700,900,700italic,900italic">
 
 <!-- must have -->
 <link type="text/css" rel="stylesheet" href="{$template_dir}/css/bannerscollection_zoominout.css">
@@ -23,8 +16,10 @@
 
         jQuery('#bannerscollection_zoominout_majestic').bannerscollection_zoominout({
             skin: 'majestic',
+//            skin: 'opportune',
             responsive: false,
-            width: 960,
+            width100Proc:1,
+//            width:1000,
             height: 400,
             myloaderTime: 0,
             autoHideNavArrows: true,
@@ -33,96 +28,90 @@
             thumbsWrapperMarginTop: 0,
             scrollSlideDuration: 0.8,
             scrollSlideEasing: 'easeOutQuad',
-            fadeSlides: true            });
+            fadeSlides: true
+        });
+        $(".thumbsHolder").css("width","2800px");
 
     });
 </script>
-<div style="background:url(preview_images/whiteBg.jpg) top center no-repeat; clear:both; margin-bottom:200px;">
-<div class="generalWidth">
+<div style="background:url({$template_dir}/images/skins/whiteBg.jpg) top center no-repeat;clear:both;margin:0 auto 200px;">
 
 
-<!-- SLIDER START -->
-
-
-<div style="padding-top:79px;">
-
-<div style="position: relative; width: 961px; height: 400px;" id="zoominoutParent_84744">
-    <div class="bannerscollection_zoominout majestic ui-draggable"
-         style="cursor: url(" skins
-    /hand.cur"), url("skins/hand.cur"), move; width: 960px; height: 400px;">
+<div style="position:relative;height:400px;" id="zoominoutParent_84744">
+    <div class="bannerscollection_zoominout majestic ui-draggable" style="cursor: url("skins/hand.cur"),url("skins/hand.cur"),move;width:960px;height:400px;">
     <div id="bannerscollection_zoominout_majestic">
         <div class="myloader" style="display: none;">
         </div>
         <!-- CONTENT -->
         <ul class="bannerscollection_zoominout_list">
-            <li data-bottom-thumb="{$images_dir}/a/thumbs/01_majestic.jpg" data-verticalposition="top" data-horizontalposition="left" data-text-id="#bannerscollection_zoominout_photoText1" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-bottom-thumb="{$images_dir}/a/thumbs/01_majestic.jpg" data-verticalposition="top" data-horizontalposition="left" data-text-id="#bannerscollection_zoominout_photoText1" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/01_majestic.jpg">
             </li>
 
-            <li data-target="_blank" data-link="http://codecanyon.net/user/LambertGroup" data-bottom-thumb="{$images_dir}/a/thumbs/02_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-text-id="#bannerscollection_zoominout_photoText2" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-target="_blank" data-link="http://codecanyon.net/user/LambertGroup" data-bottom-thumb="{$images_dir}/a/thumbs/02_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-text-id="#bannerscollection_zoominout_photoText2" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/02_majestic.jpg">
             </li>
 
-            <li data-verticalposition="center" data-horizontalposition="center" data-bottom-thumb="{$images_dir}/a/thumbs/03_majestic.jpg" data-text-id="#bannerscollection_zoominout_photoText3" data-finalzoom="1" data-initialzoom="0.71">
+            <li data-verticalposition="center" data-horizontalposition="center" data-bottom-thumb="{$images_dir}/a/thumbs/03_majestic.jpg" data-text-id="#bannerscollection_zoominout_photoText3" data-finalzoom="1" data-initialzoom="0.91">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/03_majestic.jpg">
             </li>
 
 
-            <li data-video="true" data-text-id="#bannerscollection_zoominout_photoText4" data-bottom-thumb="{$images_dir}/a/thumbs/04_majestic.jpg" data-duration="12" data-verticalposition="bottom" data-horizontalposition="left" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-video="true" data-text-id="#bannerscollection_zoominout_photoText4" data-bottom-thumb="{$images_dir}/a/thumbs/04_majestic.jpg" data-duration="12" data-verticalposition="bottom" data-horizontalposition="left" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/04_majestic.jpg">
                 <iframe width="100%" height="100%" frameborder="0" allowfullscreen="" src="{$images_dir}/http://player.youku.com/player.php/sid/XNzAyMzMzNDA4/v.swf">
                 </iframe>
             </li>
 
 
-            <li data-text-id="#bannerscollection_zoominout_photoText5" data-bottom-thumb="{$images_dir}/a/thumbs/05_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-text-id="#bannerscollection_zoominout_photoText5" data-bottom-thumb="{$images_dir}/a/thumbs/05_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/05_majestic.jpg">
             </li>
 
-            <li data-bottom-thumb="{$images_dir}/a/thumbs/06_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="1" data-initialzoom="0.74">
+            <li data-bottom-thumb="{$images_dir}/a/thumbs/06_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="1" data-initialzoom="0.91">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/06_majestic.jpg">
             </li>
 
-            <li data-text-id="#bannerscollection_zoominout_photoText7" data-bottom-thumb="{$images_dir}/a/thumbs/07_majestic.jpg" data-finalzoom="0.72" data-initialzoom="0.85">
+            <li data-text-id="#bannerscollection_zoominout_photoText7" data-bottom-thumb="{$images_dir}/a/thumbs/07_majestic.jpg" data-finalzoom="1" data-initialzoom="0.91">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/07_majestic.jpg">
             </li>
 
-            <li data-bottom-thumb="{$images_dir}/a/thumbs/08_majestic.jpg" data-finalzoom="0.70" data-initialzoom="1">
+            <li data-bottom-thumb="{$images_dir}/a/thumbs/08_majestic.jpg" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/08_majestic.jpg">
             </li>
 
             <!--first8-->
             <!--second8-->
 
-            <li data-bottom-thumb="{$images_dir}/a/thumbs/01_majestic.jpg" data-verticalposition="top" data-horizontalposition="left" data-text-id="#bannerscollection_zoominout_photoText1b" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-bottom-thumb="{$images_dir}/a/thumbs/01_majestic.jpg" data-verticalposition="top" data-horizontalposition="left" data-text-id="#bannerscollection_zoominout_photoText1b" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/01_majestic.jpg">
             </li>
 
-            <li data-target="_blank" data-link="http://codecanyon.net/user/LambertGroup" data-bottom-thumb="{$images_dir}/a/thumbs/02_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-text-id="#bannerscollection_zoominout_photoText2b" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-target="_blank" data-link="http://codecanyon.net/user/LambertGroup" data-bottom-thumb="{$images_dir}/a/thumbs/02_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-text-id="#bannerscollection_zoominout_photoText2b" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/02_majestic.jpg">
             </li>
 
-            <li data-verticalposition="center" data-horizontalposition="center" data-bottom-thumb="{$images_dir}/a/thumbs/03_majestic.jpg" data-text-id="#bannerscollection_zoominout_photoText3b" data-finalzoom="1" data-initialzoom="0.71">
+            <li data-verticalposition="center" data-horizontalposition="center" data-bottom-thumb="{$images_dir}/a/thumbs/03_majestic.jpg" data-text-id="#bannerscollection_zoominout_photoText3b" data-finalzoom="1" data-initialzoom="0.91">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/03_majestic.jpg">
             </li>
 
 
-            <li data-video="true" data-text-id="#bannerscollection_zoominout_photoText4b" data-bottom-thumb="{$images_dir}/a/thumbs/04_majestic.jpg" data-duration="12" data-verticalposition="bottom" data-horizontalposition="left" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-video="true" data-text-id="#bannerscollection_zoominout_photoText4b" data-bottom-thumb="{$images_dir}/a/thumbs/04_majestic.jpg" data-duration="12" data-verticalposition="bottom" data-horizontalposition="left" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/04_majestic.jpg">
                 <iframe width="100%" height="100%" frameborder="0" allowfullscreen="" src="{$images_dir}/http://player.youku.com/player.php/sid/XNzAyMzMzNDA4/v.swf">
                 </iframe>
             </li>
 
 
-            <li data-text-id="#bannerscollection_zoominout_photoText5b" data-bottom-thumb="{$images_dir}/a/thumbs/05_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="0.71" data-initialzoom="1">
+            <li data-text-id="#bannerscollection_zoominout_photoText5b" data-bottom-thumb="{$images_dir}/a/thumbs/05_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="0.91" data-initialzoom="1">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/05_majestic.jpg">
             </li>
 
-            <li data-bottom-thumb="{$images_dir}/a/thumbs/06_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="1" data-initialzoom="0.74">
+            <li data-bottom-thumb="{$images_dir}/a/thumbs/06_majestic.jpg" data-verticalposition="center" data-horizontalposition="right" data-finalzoom="1" data-initialzoom="0.91">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/06_majestic.jpg">
             </li>
 
-            <li data-text-id="#bannerscollection_zoominout_photoText7b" data-bottom-thumb="{$images_dir}/a/thumbs/07_majestic.jpg" data-finalzoom="0.72" data-initialzoom="0.85">
+            <li data-text-id="#bannerscollection_zoominout_photoText7b" data-bottom-thumb="{$images_dir}/a/thumbs/07_majestic.jpg" data-finalzoom="1" data-initialzoom="0.91">
                 <img width="1400" height="580" alt="" src="{$images_dir}/a/07_majestic.jpg">
             </li>
 
@@ -132,7 +121,428 @@
 
             <!--endSecond8-->
         </ul>
+        <!-- TEXTS -->
 
+        <div id="bannerscollection_zoominout_photoText1" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement11_majestic"
+                 data-initial-left="0"
+                 data-initial-top="60"
+                 data-final-left="90"
+                 data-final-top="60"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.5"
+                 data-intermediate-left="539"
+                 data-intermediate-top="60"
+                 data-intermediate-duration="1.5"
+                 data-intermediate-delay="4.3"
+                 data-intermediate-easing="swing">
+                Fully Responsive slider
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement12_majestic"
+                 data-initial-left="0"
+                 data-initial-top="105"
+                 data-final-left="90"
+                 data-final-top="105"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="1"
+                 data-intermediate-left="539"
+                 data-intermediate-top="105"
+                 data-intermediate-duration="1.5"
+                 data-intermediate-delay="4.4"
+                 data-intermediate-easing="swing">
+                many optional parameters available<br /> for each slide
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement13_majestic"
+                 data-initial-left="539"
+                 data-initial-top="500"
+                 data-final-left="539"
+                 data-final-top="175"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="3.3"
+                 data-easing="easeOutBack">
+                <span class="highlight1_majestic">Multiple Animation</span> is cooooool...
+            </div>
+        </div> <!--End First Slide Texts-->
+
+
+
+        <div id="bannerscollection_zoominout_photoText2" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement21_majestic"
+                 data-initial-left="510"
+                 data-initial-top="94"
+                 data-initial-skew="70deg,0deg"
+                 data-final-skew="0deg,0deg"
+                 data-final-left="81"
+                 data-final-top="94"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                For each image
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement22_majestic"
+                 data-initial-left="84"
+                 data-initial-top="0"
+                 data-final-left="84"
+                 data-final-top="71"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                You can define optional external link
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement23_majestic"
+                 data-initial-left="0"
+                 data-initial-top="150"
+                 data-initial-skew="-50deg,0deg"
+                 data-final-skew="0deg,0deg"
+                 data-final-left="84"
+                 data-final-top="150"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                What are you waiting for?<br /> Click on image!
+            </div>
+        </div><!--End Second Slide Texts-->
+
+
+
+        <div id="bannerscollection_zoominout_photoText3" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement31_majestic"
+                 data-initial-left="0"
+                 data-initial-top="50"
+                 data-final-left="81"
+                 data-final-top="50"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                Certainly this is the collection of Zoom In/Out sliders
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement31b_majestic"
+                 data-initial-left="0"
+                 data-initial-top="70"
+                 data-final-left="81"
+                 data-final-top="70"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                that you have longed for. Grab it now!
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement32_majestic"
+                 data-initial-left="83"
+                 data-initial-top="105"
+                 data-initial-scale="5"
+                 data-final-scale="1"
+                 data-final-left="83"
+                 data-final-top="105"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                Layer Slider Included
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line  textElement34_majestic"
+                 data-initial-left="84"
+                 data-initial-top="160"
+                 data-final-left="84"
+                 data-final-top="160"
+                 data-duration="1"
+                 data-fade-start="0"
+                 data-delay="0.5">
+                <a href="index_layer_opportune.html" target="_blank">Enjoy it RIGHT HERE!</a>
+            </div>
+        </div><!--End Third Slide Texts-->
+
+
+
+        <div id="bannerscollection_zoominout_photoText5" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement50_majestic"
+                 data-initial-left="0"
+                 data-initial-top="0"
+                 data-final-left="600"
+                 data-final-top="0"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.13">
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement51_majestic"
+                 data-initial-left="0"
+                 data-initial-top="50"
+                 data-final-left="610"
+                 data-final-top="50"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.5">
+                Ultra-Smooth<br /><a href="http://codecanyon.net/user/LambertGroup" target="_blank">Zoom In/Out</a> Effect<br />customizable with many parameters
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement52_majestic"
+                 data-initial-left="0"
+                 data-initial-top="160"
+                 data-final-left="610"
+                 data-final-top="160"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                We proudly announce you <br /><span class="highlight1">the huge updates</span> we made for this collection of sliders:<br />- Hardware Accelerated CSS3 &nbsp;&nbsp;Transitions for Layers<br />- Improved KenBurns Effect<br />- Parametters for Initial Intermediate &nbsp;&nbsp;& Exit Moves<br /><br /><a href="http://codecanyon.net/user/LambertGroup" target="_blank">Discover more FEATURES!</a>
+            </div>
+        </div> <!--End Fifth Slide Texts-->
+
+
+        <div id="bannerscollection_zoominout_photoText7" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement71_majestic"
+                 data-initial-left="480"
+                 data-initial-top="60"
+                 data-final-left="50"
+                 data-final-top="60"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                Animated text from any direction
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement72_majestic"
+                 data-initial-left="0"
+                 data-initial-top="85"
+                 data-final-left="50"
+                 data-final-top="85"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                top, bottom, left and right
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement73_majestic"
+                 data-initial-left="50"
+                 data-initial-top="250"
+                 data-final-left="50"
+                 data-final-top="120"
+                 data-duration="1"
+                 data-fade-start="0"
+                 data-delay="0.5">
+                Any color, CSS and HTML formated
+            </div>
+        </div> <!--End Seventh Slide Texts-->
+
+
+        <!-- next 8 -->
+        <div id="bannerscollection_zoominout_photoText1b" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement11_majestic"
+                 data-initial-left="0"
+                 data-initial-top="60"
+                 data-final-left="90"
+                 data-final-top="60"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.5"
+                 data-intermediate-left="539"
+                 data-intermediate-top="60"
+                 data-intermediate-duration="1.5"
+                 data-intermediate-delay="4.3"
+                 data-intermediate-easing="swing">
+                Fully Responsive slider
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement12_majestic"
+                 data-initial-left="0"
+                 data-initial-top="105"
+                 data-final-left="90"
+                 data-final-top="105"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="1"
+                 data-intermediate-left="539"
+                 data-intermediate-top="105"
+                 data-intermediate-duration="1.5"
+                 data-intermediate-delay="4.4"
+                 data-intermediate-easing="swing">
+                many optional parameters available<br /> for each slide
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement13_majestic"
+                 data-initial-left="539"
+                 data-initial-top="500"
+                 data-final-left="539"
+                 data-final-top="175"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="3.3"
+                 data-easing="easeOutBack">
+                <span class="highlight1_majestic">Multiple Animation</span> is cooooool...
+            </div>
+        </div> <!--End First Slide Texts-->
+
+
+
+        <div id="bannerscollection_zoominout_photoText2b" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement21_majestic"
+                 data-initial-left="510"
+                 data-initial-top="94"
+                 data-initial-skew="70deg,0deg"
+                 data-final-skew="0deg,0deg"
+                 data-final-left="81"
+                 data-final-top="94"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                For each image
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement22_majestic"
+                 data-initial-left="84"
+                 data-initial-top="0"
+                 data-final-left="84"
+                 data-final-top="71"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                You can define optional external link
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement23_majestic"
+                 data-initial-left="0"
+                 data-initial-top="150"
+                 data-initial-skew="-50deg,0deg"
+                 data-final-skew="0deg,0deg"
+                 data-final-left="84"
+                 data-final-top="150"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                What are you waiting for?<br /> Click on image!
+            </div>
+
+        </div><!--End Second Slide Texts-->
+
+
+
+        <div id="bannerscollection_zoominout_photoText3b" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement31_majestic"
+                 data-initial-left="0"
+                 data-initial-top="50"
+                 data-final-left="81"
+                 data-final-top="50"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                Certainly this is the collection of Zoom In/Out sliders
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement31b_majestic"
+                 data-initial-left="0"
+                 data-initial-top="70"
+                 data-final-left="81"
+                 data-final-top="70"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                that you have longed for. Grab it now!
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement32_majestic"
+                 data-initial-left="83"
+                 data-initial-top="105"
+                 data-initial-scale="5"
+                 data-final-scale="1"
+                 data-final-left="83"
+                 data-final-top="105"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                Layer Slider Included
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line  textElement34_majestic"
+                 data-initial-left="84"
+                 data-initial-top="160"
+                 data-final-left="84"
+                 data-final-top="160"
+                 data-duration="1"
+                 data-fade-start="0"
+                 data-delay="0.5">
+                <a href="majesticLayerSliderFixed.html" target="_blank">Enjoy it RIGHT HERE!</a>
+            </div>
+        </div><!--End Third Slide Texts-->
+
+
+
+        <div id="bannerscollection_zoominout_photoText5b" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement50_majestic"
+                 data-initial-left="0"
+                 data-initial-top="0"
+                 data-final-left="600"
+                 data-final-top="0"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.13">
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement51_majestic"
+                 data-initial-left="0"
+                 data-initial-top="50"
+                 data-final-left="610"
+                 data-final-top="50"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                Ultra-Smooth<br /><a href="http://codecanyon.net/user/LambertGroup" target="_blank">Zoom In/Out</a> Effect<br />customizable with many parameters
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement52_majestic"
+                 data-initial-left="0"
+                 data-initial-top="160"
+                 data-final-left="610"
+                 data-final-top="160"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                We proudly announce you <br /><span class="highlight1">the huge updates</span> we made for this collection of sliders:<br />- Hardware Accelerated CSS3 &nbsp;&nbsp;Transitions for Layers<br />- Improved KenBurns Effect<br />- Parametters for Initial Intermediate &nbsp;&nbsp;& Exit Moves<br /><br /><a href="http://codecanyon.net/user/LambertGroup" target="_blank">Discover more FEATURES!</a>
+            </div>
+        </div> <!--End Fifth Slide Texts-->
+
+
+        <div id="bannerscollection_zoominout_photoText7b" class="bannerscollection_zoominout_texts">
+            <div class="bannerscollection_zoominout_text_line textElement71_majestic"
+                 data-initial-left="480"
+                 data-initial-top="60"
+                 data-final-left="50"
+                 data-final-top="60"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0">
+                Animated text from any direction
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement72_majestic"
+                 data-initial-left="0"
+                 data-initial-top="85"
+                 data-final-left="50"
+                 data-final-top="85"
+                 data-duration="0.5"
+                 data-fade-start="0"
+                 data-delay="0.3">
+                top, bottom, left and right
+            </div>
+
+            <div class="bannerscollection_zoominout_text_line textElement73_majestic"
+                 data-initial-left="50"
+                 data-initial-top="250"
+                 data-final-left="50"
+                 data-final-top="120"
+                 data-duration="1"
+                 data-fade-start="0"
+                 data-delay="0.5">
+                Any color, CSS and HTML formated
+            </div>
+        </div> <!--End Seventh Slide Texts-->
 
 
     </div>

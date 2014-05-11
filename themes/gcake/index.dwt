@@ -34,10 +34,11 @@
 <!-- #BeginLibraryItem "/library/page_header_index.lbi" --><!-- #EndLibraryItem -->
 <!--// end header //-->
 
-<div>
+<div class="main">
 
 
-<!-- #BeginLibraryItem "/library/index_show_new.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/index_show.lbi" --><!-- #EndLibraryItem -->
+
 <!-- #BeginLibraryItem "/library/index_goods.lbi" --><!-- #EndLibraryItem -->
 </div>
 

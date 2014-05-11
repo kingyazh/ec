@@ -1,28 +1,73 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+<script type="text/javascript" src="{$template_dir}/js/jcarousellite_1.0.1.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery(".loop1").jCarouselLite({
+            btnNext: ".next1",
+            btnPrev: ".prev1",
+            auto: 3000,
+            speed: 800,
+            auto: false
+        });
+        jQuery(".loop2").jCarouselLite({
+            btnNext: ".next2",
+            btnPrev: ".prev2",
+            auto: 3000,
+            speed: 800,
+            auto: false
+        });
+        jQuery(".loop3").jCarouselLite({
+            btnNext: ".next3",
+            btnPrev: ".prev3",
+            auto: 3000,
+            speed: 800,
+            auto: false
+        });
+        jQuery(".loop4").jCarouselLite({
+            btnNext: ".next4",
+            btnPrev: ".prev4",
+            auto: 3000,
+            speed: 800,
+            auto: false
+        });
+    });
+</script>
 <!-- {if $best_goods} -->
 <!--loop -->
 <div class="xuanhuan_out">
+    <div class="title clearfix">
+        <h1 class="h1 left"><a href="" target="_blank"><span>新品上市</span>&nbsp;&nbsp;&nbsp;New Arrives</a></h1>
+        <h1 class="h1 right"><a href="" target="_blank"><span>查看更多</span></a></h1>
+    </div>
     <div class="xuanhuan">
-        <a href="javascript:void(0);" class="next"><span></span></a>
-        <div class="loop">
+        <a href="javascript:void(0);" class="next1"></a>
+        <div class="loop1" style="width: 928px; overflow: hidden; visibility: visible; position: relative; z-index: 2; left: 0px;">
             <ul>
                 <!--{foreach from=$best_goods item=goods}-->
-                <li style="overflow:hidden;width:244px;height:274px;">
-                    <a href="{$goods.url}">
-                        <!--{foreach from=$goods.goods_pics item=goods_pics}-->
-                        <!--{if $goods_pics.img_desc == 'best'}-->
-                        <img src="{$goods_pics.img_url}" alt="{$goods_pics.img_desc|escape:html}" />
-                        <!--{/if}-->
-                        <!--{/foreach}-->
-                        <img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
-                    </a>
+                <li>
+                    <p class="txtCenter marT20">
+                        <a href="{$goods.url}">
+                            <!--{foreach from=$goods.goods_pics item=goods_pics}-->
+                            <!--{if $goods_pics.img_desc == 'best'}-->
+                            <img src="{$goods_pics.img_url}" alt="{$goods_pics.img_desc|escape:html}" />
+                            <!--{/if}-->
+                            <!--{/foreach}-->
+                            <img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+                        </a>
+                    </p>
+                    <p class="name"><a href="{$goods.url}">{$goods.name|escape:html}</a></p>
+                    <p class="price">
+                        <span class="right marR5"><a href="{$goods.url}">立即购买&gt;&gt;</a></span>
+                        {$goods.shop_price}起{$goods.promote_price}{$goods.price}
+                    </p>
                 </li>
                 <!--{/foreach}-->
             </ul>
         </div>
-        <a href="javascript:void(0);" class="prev"><span></span></a>
+        <a href="javascript:void(0);" class="prev1"></a>
     </div>
+    <div class="xuanhuan_b"></div>
 </div>
 <!--loop 结束-->
 <!-- {/if} -->

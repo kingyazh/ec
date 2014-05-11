@@ -77,7 +77,7 @@ skins available:
 	z-index:10;
 }
 .myloader {
-	background:url(skins/loader.gif);
+	background:url(../images/skins/loader.gif);
 	width:37px;
 	height:37px;
 	position:absolute;
@@ -108,22 +108,22 @@ skins available:
 	left:0px;
 	width:63px;
 	height:72px;
-	background:url(skins/opportune/leftNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/leftNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 .bannerscollection_zoominout.opportune .leftNav:hover {
-	background:url(skins/opportune/leftNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/leftNavON.png) 0 0 no-repeat;
 }
 .bannerscollection_zoominout.opportune .rightNav {
 	position:absolute;
 	right:0px;
 	width:63px;
 	height:72px;
-	background:url(skins/opportune/rightNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/rightNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 .bannerscollection_zoominout.opportune .rightNav:hover {
-	background:url(skins/opportune/rightNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/rightNavON.png) 0 0 no-repeat;
 }
 .bannerscollection_zoominout.opportune .bottomNav {
 	position:absolute;
@@ -138,7 +138,7 @@ skins available:
 	display:block;
 	width:12px;
 	height:12px;
-	background:url(skins/opportune/bottomNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/bottomNavOFF.png) 0 0 no-repeat;
 	padding-left:6px;
 	cursor: pointer;
 	-webkit-box-sizing:content-box;
@@ -152,7 +152,7 @@ skins available:
 	width:12px;
 	height:12px;
 	padding-left:6px;
-	background:url(skins/opportune/bottomNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/bottomNavON.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 
@@ -162,7 +162,7 @@ skins available:
 	position:absolute;
 	width:88px;
 	height:95px;
-	background:url(skins/opportune/bottomOverThumbBg.png) 0px 0px no-repeat;
+	background:url(../images/skins/opportune/bottomOverThumbBg.png) 0px 0px no-repeat;
 	bottom:25px;
 	margin-left:-44px;
 }
@@ -180,14 +180,14 @@ skins available:
 	position:absolute;
 	width:73px;
 	height:73px;
-	background:url(skins/opportune/play_overOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/play_overOFF.png) 0 0 no-repeat;
 	display:none;
 	z-index:4;
 	cursor: pointer;
 }
 
 .bannerscollection_zoominout.opportune .playOver:hover {
-	background:url(skins/opportune/play_overON.png) 0 0 no-repeat;
+	background:url(../images/skins/opportune/play_overON.png) 0 0 no-repeat;
 	display:none;
 	z-index:4;
 	cursor: pointer;
@@ -219,35 +219,35 @@ skins available:
 	left:0px;
 	width:70px;
 	height:70px;
-	background:url(skins/majestic/leftNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/leftNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 .bannerscollection_zoominout.majestic .leftNav:hover {
-	background:url(skins/majestic/leftNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/leftNavON.png) 0 0 no-repeat;
 }
 .bannerscollection_zoominout.majestic .rightNav {
 	position:absolute;
 	right:0px;
 	width:70px;
 	height:70px;
-	background:url(skins/majestic/rightNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/rightNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 .bannerscollection_zoominout.majestic .rightNav:hover {
-	background:url(skins/majestic/rightNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/rightNavON.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.majestic .playOver {
 	position:absolute;
 	width:73px;
 	height:73px;
-	background:url(skins/majestic/play_overOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/play_overOFF.png) 0 0 no-repeat;
 	display:none;
 	z-index:4;
 	cursor: pointer;
 }
 .bannerscollection_zoominout.majestic .playOver:hover {
-	background:url(skins/majestic/play_overON.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/play_overON.png) 0 0 no-repeat;
 	display:none;
 	z-index:4;
 	cursor: pointer;
@@ -285,7 +285,7 @@ skins available:
 }
 
 .bannerscollection_zoominout.majestic .thumbsHolder_ThumbON {
-	background:url(skins/majestic/thumbActiveArrow.png) center 0px no-repeat;
+	background:url(../images/skins/majestic/thumbActiveArrow.png) center 0px no-repeat;
 }
 
 .bannerscollection_zoominout.majestic .thumbsHolder_ThumbON img {
@@ -297,40 +297,40 @@ skins available:
 	position:absolute;
 	width:16px;
 	height:135px;
-	background:url(skins/majestic/carouselLeftNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselLeftNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 
 .bannerscollection_zoominout.majestic .carouselLeftNav:hover {
-	background:url(skins/majestic/carouselLeftNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselLeftNavON.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.majestic .carouselLeftNavDisabled {
-	background:url(skins/majestic/carouselLeftNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselLeftNavDisable.png) 0 0 no-repeat;
 	cursor:default;
 }
 .bannerscollection_zoominout.majestic .carouselLeftNavDisabled:hover {
-	background:url(skins/majestic/carouselLeftNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselLeftNavDisable.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.majestic .carouselRightNav {
 	position:absolute;
 	width:16px;
 	height:135px;
-	background:url(skins/majestic/carouselRightNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselRightNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 
 .bannerscollection_zoominout.majestic .carouselRightNav:hover {
-	background:url(skins/majestic/carouselRightNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselRightNavON.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.majestic .carouselRightNavDisabled {
-	background:url(skins/majestic/carouselRightNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselRightNavDisable.png) 0 0 no-repeat;
 	cursor:default;
 }
 .bannerscollection_zoominout.majestic .carouselRightNavDisabled:hover {
-	background:url(skins/majestic/carouselRightNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/majestic/carouselRightNavDisable.png) 0 0 no-repeat;
 }
 
 
@@ -352,11 +352,11 @@ skins available:
 	margin-top:-16px;
 	width:60px;
 	height:110px;
-	background:url(skins/generous/leftNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/leftNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 .bannerscollection_zoominout.generous .leftNav:hover {
-	background:url(skins/generous/leftNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/leftNavON.png) 0 0 no-repeat;
 }
 .bannerscollection_zoominout.generous .rightNav {
 	position:absolute;
@@ -364,25 +364,25 @@ skins available:
 	margin-top:-16px;
 	width:60px;
 	height:110px;
-	background:url(skins/generous/rightNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/rightNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 .bannerscollection_zoominout.generous .rightNav:hover {
-	background:url(skins/generous/rightNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/rightNavON.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.generous .playOver {
 	position:absolute;
 	width:73px;
 	height:73px;
-	background:url(skins/generous/play_overOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/play_overOFF.png) 0 0 no-repeat;
 	display:none;
 	z-index:4;
 	cursor: pointer;
 }
 
 .bannerscollection_zoominout.generous .playOver:hover {
-	background:url(skins/generous/play_overON.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/play_overON.png) 0 0 no-repeat;
 	display:none;
 	z-index:4;
 	cursor: pointer;
@@ -393,7 +393,7 @@ skins available:
 /* thumbs */
 .bannerscollection_zoominout.generous .thumbsHolderWrapper {
 	position:absolute;
-	background:url(skins/generous/thumbsBg.png) repeat-x;
+	background:url(../images/skins/generous/thumbsBg.png) repeat-x;
 	height:110px;
 	width:100%;
 	z-index:2;
@@ -425,7 +425,7 @@ skins available:
 }
 
 .bannerscollection_zoominout.generous .thumbsHolder_ThumbON {
-	background:url(skins/generous/thumbActiveArrow.png) center 0px no-repeat;	
+	background:url(../images/skins/generous/thumbActiveArrow.png) center 0px no-repeat;	
 }
 
 .bannerscollection_zoominout.generous .thumbsHolder_ThumbON a img, .thumbsHolder_ThumbON a  { border: none; overflow: hidden; float: left; }
@@ -436,40 +436,40 @@ skins available:
 	position:absolute;
 	width:44px;
 	height:110px;
-	background:url(skins/generous/carouselLeftNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselLeftNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 
 .bannerscollection_zoominout.generous .carouselLeftNav:hover {
-	background:url(skins/generous/carouselLeftNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselLeftNavON.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.generous .carouselLeftNavDisabled {
-	background:url(skins/generous/carouselLeftNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselLeftNavDisable.png) 0 0 no-repeat;
 	cursor:default;
 }
 .bannerscollection_zoominout.generous .carouselLeftNavDisabled:hover {
-	background:url(skins/generous/carouselLeftNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselLeftNavDisable.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.generous .carouselRightNav {
 	position:absolute;
 	width:44px;
 	height:110px;
-	background:url(skins/generous/carouselRightNavOFF.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselRightNavOFF.png) 0 0 no-repeat;
 	cursor: pointer;
 }
 
 .bannerscollection_zoominout.generous .carouselRightNav:hover {
-	background:url(skins/generous/carouselRightNavON.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselRightNavON.png) 0 0 no-repeat;
 }
 
 .bannerscollection_zoominout.generous .carouselRightNavDisabled {
-	background:url(skins/generous/carouselRightNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselRightNavDisable.png) 0 0 no-repeat;
 	cursor:default;
 }
 .bannerscollection_zoominout.generous .carouselRightNavDisabled:hover {
-	background:url(skins/generous/carouselRightNavDisable.png) 0 0 no-repeat;
+	background:url(../images/skins/generous/carouselRightNavDisable.png) 0 0 no-repeat;
 }
 
 

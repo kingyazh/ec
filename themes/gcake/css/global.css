@@ -1,10 +1,10 @@
 ﻿/* 全局CSS定义 */
-body{font-size:12px; font-family:"Microsoft Yahei","微软雅黑","Helvetica Neue","Hiragino Sans GB","Segoe UI",SimSun,"宋体",Tahoma,Arial,STHeiti,sans-serif; margin:0;border:0;padding:0;font-size:12px; color:#cea758;}
+body{font-size:14px;font-family:"Microsoft Yahei","微软雅黑","Helvetica Neue","Hiragino Sans GB","Segoe UI",SimSun,"宋体",Tahoma,Arial,STHeiti,sans-serif; margin:0;border:0;padding:0;color:#cea758;}
 div,form,ul,ol,li,dl,dt,dd,span,p{margin:0;padding:0;border:0;}
 img,a img{border:0;margin:0;padding:0;}
-h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:14px;font-weight:normal;}
 ul,ol,li,dl,dt,dd{list-style:none;}
-table,td,input{font-size:12px;padding:0}
+table,td,input{font-size:14px;padding:0}
 i,em,var { font-style:normal; }
 
 
@@ -95,10 +95,10 @@ a,area,button {blr:expression(this.onFocus=this.blur()) }
 
 /*header 样式 */
 .header{width:100%; height:111px; background:url(../images_xin/header_bg.jpg) repeat; position:relative; z-index:100;}
-.header .nav{width:990px; height:111px; margin:0 auto;}
-.header .nav .logo{width:154px; height:128px; position:absolute; z-index:30;}
+.header .nav{width:1100px; height:111px; margin:0 auto;}
+.header .nav .logo{width:140px; height:128px; position:absolute; z-index:30;}
 .header .nav .numb{font-size:16px; font-weight:bold;}
-.header .nav .left_header{width:830px; height:111px;}
+.header .nav .left_header{width:968px; height:111px;}
 .header .nav .left_header .left_shang{width:800px; height:70px; line-height:20px; padding-top:10px; float:right;}
 .header .nav .left_header .left_shang img{ margin:12px 0; vertical-align:middle;}
 .header .nav .left_header .left_xia{height:40px; width:830px;}
@@ -111,22 +111,24 @@ a,area,button {blr:expression(this.onFocus=this.blur()) }
 .header .nav_center .test li:hover{ background:#251c15;}
 .header .nav_center .test li:hover a{color:#FFF}
 .header .nav_center .test li img{padding-left:8px; margin:9px 0; vertical-align:middle;}
-.header .nav_center .test .nav_xia_ul { display:none; position:absolute; top:25px; left:0px; z-index:40; background:#251c15; border:none; width:97px;}
-.header .nav_center .test .nav_xia_ul li{ margin:0; padding:0; height:36px;}
+.header .nav_center .test .nav_xia_ul { display:none; position:absolute; top:25px; left:0px; z-index:40; background:#251c15; border:none;width:97px;}
+.header .nav_center .test .nav_xia_ul li{width:96px;margin:0; padding:0; height:36px;border-right:1px solid #7F7561;}
 .header .nav_center .test .nav_xia_ul li a{ border:none; border-bottom:#3f342b solid 1px; display:block; text-align:left; line-height:35px; width:72px; margin:0 10px; height:35px; color:#cea758;}
 .header .nav_center .test .nav_xia_ul li:last-child a{border:none;}
 .header .nav_center .test .nav_xia_ul li:hover a{color:#FFF}
 .search_margin{margin-top:0; *margin-top:-7px;}
 /*footer 样式*/
-.footer{width:100%; height:190px; background:#241c15; color:#decda1; position:relative;}
-.footer .content{width:990px; margin:0 auto; height:190px;}
+.footer{width:100%; height:190px; background:#2e2e2e; color:#decda1; position:relative;}
+.footer .content{width:100%; margin:0 auto; height:190px;}
 .footer .content .first{height:85px; width:741px; margin:0 auto;}
 .footer .content .first .p1{text-align:right; width:350px; border-right:#7f7569 1px solid;}
 .footer .content .first .p2{width:350px; }
 .footer .content .second{height:60px; background:url(../images_xin/footer.jpg) center top no-repeat; line-height:50px;position:relative;}
 .footer .content .second img{margin-right:10px;}
-.footer .content .second .p1{width:455px; text-align:right; margin-top:3px;}
-.footer .content .second .p2{width:460px;  margin-top:3px;}
+.footer .content .second .p1{width:45%;text-align:right;margin-top:3px;padding:0 20px 0 0;}
+.footer .content .second .p2{width:45%;margin-top:3px;padding:0 0 0 20px;}
+.footer .content .second a{display:inline-block;padding:0 10px;}
+.footer .content .c_r{text-align:center;}
 .ccnz{ position:absolute; left:30px; top:130px;}
 /*按钮CSS3*/
 .button_tongyong{
@@ -162,7 +164,7 @@ a,area,button {blr:expression(this.onFocus=this.blur()) }
 	width:775px;
 	background: none repeat scroll 0 0 #FDFDF3;
     border-left: 1px solid #D2AF6B;
-	border-top: 1px solid #DD2AF6B;
+	border-top: 1px solid #D2AF6B;
     color:#000;
 }
 .sopping_table_style{
