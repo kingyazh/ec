@@ -1,5 +1,5 @@
 <!-- {if $goods} -->
-<a href="flow.php"><b>{$goods_number}</b>购物车</a>
+<a href="flow.php"><span style="display:block; float:right; width:20px; height:20px; background:#000; text-align:center; margin-right:5px;">{$goods_number}</span>购物车</a>
 
 
 
@@ -31,7 +31,7 @@
 	</ul>
 </div>
 <!-- {else} -->
-<b>0</b>购物车
+<span style="display:block; float:right; width:20px; height:20px; background:#000; text-align:center; margin-right:5px;">0</span>购物车
 
 
 
