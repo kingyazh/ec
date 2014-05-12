@@ -3,30 +3,9 @@
 <script type="text/javascript" src="{$template_dir}/js/jcarousellite_1.0.1.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function () {
-        jQuery(".loop1").jCarouselLite({
-            btnNext: ".next1",
-            btnPrev: ".prev1",
-            auto: 3000,
-            speed: 800,
-            auto: false
-        });
-        jQuery(".loop2").jCarouselLite({
-            btnNext: ".next2",
-            btnPrev: ".prev2",
-            auto: 3000,
-            speed: 800,
-            auto: false
-        });
-        jQuery(".loop3").jCarouselLite({
-            btnNext: ".next3",
-            btnPrev: ".prev3",
-            auto: 3000,
-            speed: 800,
-            auto: false
-        });
-        jQuery(".loop4").jCarouselLite({
-            btnNext: ".next4",
-            btnPrev: ".prev4",
+        jQuery(".loopindex").jCarouselLite({
+            btnNext: ".nextindex",
+            btnPrev: ".previndex",
             auto: 3000,
             speed: 800,
             auto: false
@@ -41,8 +20,8 @@
         <h1 class="h1 right"><a href="" target="_blank"><span>查看更多</span></a></h1>
     </div>
     <div class="xuanhuan">
-        <a href="javascript:void(0);" class="next1"></a>
-        <div class="loop1" style="width: 928px; overflow: hidden; visibility: visible; position: relative; z-index: 2; left: 0px;">
+        <a href="javascript:void(0);" class="nextindex next1"></a>
+        <div class="loopindex loop1" style="width: 928px; overflow: hidden; visibility: visible; position: relative; z-index: 2; left: 0px;">
             <ul>
                 <!--{foreach from=$best_goods item=goods}-->
                 <li>
@@ -59,13 +38,13 @@
                     <p class="name"><a href="{$goods.url}">{$goods.name|escape:html}</a></p>
                     <p class="price">
                         <span class="right marR5"><a href="{$goods.url}">立即购买&gt;&gt;</a></span>
-                        {$goods.shop_price}起{$goods.promote_price}{$goods.price}
+                        <span class="p">{$goods.shop_price}起{$goods.promote_price}{$goods.price}</span>
                     </p>
                 </li>
                 <!--{/foreach}-->
             </ul>
         </div>
-        <a href="javascript:void(0);" class="prev1"></a>
+        <a href="javascript:void(0);" class="previndex prev1"></a>
     </div>
     <div class="xuanhuan_b"></div>
 </div>

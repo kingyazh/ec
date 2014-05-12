@@ -94,9 +94,10 @@ a,area,button {blr:expression(this.onFocus=this.blur()) }
 .shoucang{background:url(../images_xin/purchase/shoucang.jpg)  no-repeat; display:block; width:87px; height:27px; cursor:pointer;}
 
 /*header 样式 */
-.header{width:100%; height:111px; background:url(../images_xin/header_bg.jpg) repeat; position:relative; z-index:100;}
+.header{width:100%; height:111px;background:#500500/*#700700*/ /*url(../images_xin/header_bg.jpg) repeat*/; position:relative; z-index:100;}
 .header .nav{width:1100px; height:111px; margin:0 auto;}
-.header .nav .logo{width:140px; height:128px; position:absolute; z-index:30;}
+.header .nav .logo{width:140px;height:128px;position:absolute;z-index:30;}
+.header .nav .logo img{margin:15px 0 0;}
 .header .nav .numb{font-size:16px; font-weight:bold;}
 .header .nav .left_header{width:968px; height:111px;}
 .header .nav .left_header .left_shang{width:800px; height:70px; line-height:20px; padding-top:10px; float:right;}
@@ -107,23 +108,23 @@ a,area,button {blr:expression(this.onFocus=this.blur()) }
 .header .nav .nav_right .button{ border:0 none; background:url(../images_xin/header_button.jpg) no-repeat center center; width:22px; height:22px; cursor:pointer; vertical-align:middle;}
 .header .nav .nav_center{width:850px; height:40px;}
 .header .nav_center .test li{float:left; width:97px; position:relative;}
-.header .nav_center .test li a{border-right:#7f7561 1px solid; display:block; text-align:center; line-height:25px; height:25px;}
-.header .nav_center .test li:hover{ background:#251c15;}
+.header .nav_center .test li a{border-right:#F2DEB5 1px solid; display:block; text-align:center; line-height:25px; height:25px;}
+.header .nav_center .test li:hover{background:#f4a80e;}
 .header .nav_center .test li:hover a{color:#FFF}
 .header .nav_center .test li img{padding-left:8px; margin:9px 0; vertical-align:middle;}
 .header .nav_center .test .nav_xia_ul { display:none; position:absolute; top:25px; left:0px; z-index:40; background:#251c15; border:none;width:97px;}
-.header .nav_center .test .nav_xia_ul li{width:96px;margin:0; padding:0; height:36px;border-right:1px solid #7F7561;}
+.header .nav_center .test .nav_xia_ul li{width:96px;margin:0; padding:0; height:36px;border-right:1px solid #F2DEB5;}
 .header .nav_center .test .nav_xia_ul li a{ border:none; border-bottom:#3f342b solid 1px; display:block; text-align:left; line-height:35px; width:72px; margin:0 10px; height:35px; color:#cea758;}
 .header .nav_center .test .nav_xia_ul li:last-child a{border:none;}
 .header .nav_center .test .nav_xia_ul li:hover a{color:#FFF}
 .search_margin{margin-top:0; *margin-top:-7px;}
 /*footer 样式*/
-.footer{width:100%; height:190px; background:#2e2e2e; color:#decda1; position:relative;}
+.footer{width:100%; height:190px; background:#500500; color:#decda1; position:relative;}
 .footer .content{width:100%; margin:0 auto; height:190px;}
-.footer .content .first{height:85px; width:741px; margin:0 auto;}
+.footer .content .first{height:65px; width:741px; margin:0 auto;}
 .footer .content .first .p1{text-align:right; width:350px; border-right:#7f7569 1px solid;}
 .footer .content .first .p2{width:350px; }
-.footer .content .second{height:60px; background:url(../images_xin/footer.jpg) center top no-repeat; line-height:50px;position:relative;}
+.footer .content .second{height:63px; background:url(../images_new/mbkp_logo.png) center top no-repeat; line-height:50px;position:relative;}
 .footer .content .second img{margin-right:10px;}
 .footer .content .second .p1{width:45%;text-align:right;margin-top:3px;padding:0 20px 0 0;}
 .footer .content .second .p2{width:45%;margin-top:3px;padding:0 0 0 20px;}

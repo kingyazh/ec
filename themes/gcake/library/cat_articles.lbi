@@ -16,7 +16,7 @@
 			<a href="{$article_item.url}"><img src="{$article_item.file_url}" /></a>
 			{/if}
 		</li>
-		<!--{elseif $article_item.title == '关于品美四季（PinMeiSiJi）'}-->
+		<!--{elseif $article_item.title == '关于面包快跑（PinMeiSiJi）'}-->
 		<div class="index_mensa">
 			<dl>
 				<dt>{$article_item.title}</dt>

@@ -1,37 +1,79 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" src="{$template_dir}/js/jcarousellite_1.0.1.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery(".loophot").jCarouselLite({
+            btnNext: ".nexthot",
+            btnPrev: ".prevhot",
+            auto: 3000,
+            speed: 800,
+            auto: false
+        });
+    });
+</script>
+
+
 <!-- {if $hot_goods} -->
 <!-- {if $cat_rec_sign neq 1} -->
-<div class="box">
-<div class="box_2 centerPadd">
-  <div class="itemTit Hot" id="itemHot">
-      {if $cat_rec[3]}
-      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, 0);">{$lang.all_goods}</a></h2>
-      {foreach from=$cat_rec[3] item=rec_data}
-      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, {$rec_data.cat_id})">{$rec_data.cat_name}</a></h2>
-      {/foreach}
-      {/if}
-  </div>
-  <div id="show_hot_area" class="clearfix goodsBox">
-  <!-- {/if} -->
-  <!--{foreach from=$hot_goods item=goods}-->
-  <div class="goodsItem">
-         <span class="hot"></span>
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
-           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
-           <font class="f1">
-           <!-- {if $goods.promote_price neq ""} -->
-          {$goods.promote_price}
-          <!-- {else}-->
-          {$goods.shop_price}
-          <!--{/if}-->
-           </font>
-        </div>
-  <!--{/foreach}-->
-  <div class="more"><a href="../search.php?intro=hot"><img src="images/more.gif" /></a></div>
-  <!-- {if $cat_rec_sign neq 1} -->
-  </div>
+<div style="display:none;">
+    {if $cat_rec[3]}
+    <h2><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, 0);">{$lang.all_goods}</a></h2>
+    {foreach from=$cat_rec[3] item=rec_data}
+    <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemHot', 'h2', this);get_cat_recommend(3, {$rec_data.cat_id})">{$rec_data.cat_name}</a></h2>
+    {/foreach}
+    {/if}
 </div>
-</div>
-<div class="blank5"></div>
-  <!-- {/if} -->
 <!-- {/if} -->
+
+<!--loop -->
+<div class="xuanhuan_out">
+    <div class="title clearfix">
+        <h1 class="h1 left"><a href="../search.php?intro=hot" target="_blank"><span>热销商品</span>&nbsp;&nbsp;&nbsp;Hot Goods</a></h1>
+        <h1 class="h1 right"><a href="../search.php?intro=hot" target="_blank"><span>查看更多</span></a></h1>
+    </div>
+    <div class="xuanhuan">
+        <a href="javascript:void(0);" class="nexthot next1"></a>
+        <div class="loophot loop1" style="width: 928px; overflow: hidden; visibility: visible; position: relative; z-index: 2; left: 0px;">
+            <ul>
+                <!--{foreach from=$hot_goods item=goods}-->
+                <li>
+                    <p class="txtCenter marT20">
+                        <a href="{$goods.url}">
+                            <!--{foreach from=$goods.goods_pics item=goods_pics}-->
+                            <!--{if $goods_pics.img_desc == 'best'}-->
+                            <img src="{$goods_pics.img_url}" alt="{$goods_pics.img_desc|escape:html}" />
+                            <!--{/if}-->
+                            <!--{/foreach}-->
+                            <img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+                        </a>
+                    </p>
+                    <p class="name"><a href="{$goods.url}">{$goods.name|escape:html}</a></p>
+                    <p class="price">
+                        <span class="right marR5"><a href="{$goods.url}">立即购买&gt;&gt;</a></span>
+                        <span class="p">{$goods.shop_price}起{$goods.promote_price}{$goods.price}</span>
+                        <!-- {if $goods.promote_price neq ""} --><!-- {else}--><!--{/if}-->
+                    </p>
+                    <p style="display:none;">
+                        {if $goods.att.attr_name }
+                        {if $goods.att.attr_value}
+                        {$goods.att.attr_value}
+                        {/if}
+                        {else}
+
+                        {/if}
+                    </p>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="prevhot prev1"></a>
+    </div>
+    <div class="xuanhuan_b"></div>
+</div>
+<!--loop 结束-->
+
+<!-- {if $cat_rec_sign neq 1} --><!-- {/if} -->
+<!-- {/if} -->
+
+

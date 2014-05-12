@@ -1,25 +1,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{insert_scripts files='jquery-1.9.0.min.js,jquery.json-2.4.min.js'}
+{insert_scripts files='jquery-1.7.2.min.js,jquery.json-2.4.min.js'}
 
 <div><!-- the body -->
 
     <div class="header">
         <div class="nav">
-            <div class="left logo"><a href="/"><img src="{$template_dir}/images_new/pmsj-logo.png"></a></div>
+            <div class="left logo"><a href="index.php"><img src="{$template_dir}/images_new/mbkp_logo.png"></a></div>
             <div class="right left_header">
                 <div class="left_shang">
                     <p id="loginStr" name="loginStr" class="txtRight">
-						<span class="right" style="display:none;"><a href="#" target="_blank">&nbsp;&nbsp;|&nbsp;&nbsp;去旧版品美四季</a></span>
+						<span class="right" style="display:none;"><a href="#" target="_blank">&nbsp;&nbsp;|&nbsp;&nbsp;去旧版面包快跑</a></span>
 						{insert_scripts files='co/transport.js'}
 
 			            <div class="right" id="ECS_CARTINFO">{insert name='cart_info'}&nbsp;&nbsp;</div>
 
 						<!-- {if $smarty.session.user_id gt 0} -->
 						<span class="right">  <a href="user.php">{$lang.edit_user_info}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-						<span class="right"> 欢迎您光临品美四季！&nbsp;<a href="user.php?act=logout">{$lang.label_logout}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span class="right"> 欢迎您光临面包快跑！&nbsp;<a href="user.php?act=logout">{$lang.label_logout}</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 						<!-- {else} -->
 						<span class="right">  <a href="user.php?act=register" onclick="_gaq.push(['_trackEvent', 'Login(In Site)', 'Register']);">注册</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-						<span class="right"> 欢迎您光临品美四季！&nbsp;<a href="user.php" onclick="_gaq.push(['_trackEvent', 'Login(In Site)', 'Login']);">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span class="right"> 欢迎您光临面包快跑！&nbsp;<a href="user.php" onclick="_gaq.push(['_trackEvent', 'Login(In Site)', 'Login']);">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 						<!-- {/if} -->
 					</p>
                     <p class="txtRight search_margin right" style="margin-right:30px;">

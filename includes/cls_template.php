@@ -553,8 +553,8 @@ class cls_template
     {
         if (strrpos($val, '[') !== false)
         {
-            $val = preg_replace("/\[([^\[\]]*)\]/eis", "'.'.str_replace('$','\$','\\1')", $val);
-//            $val = preg_replace_callback("/\[([^\[\]]*)\]/", function($r) { return "'.'.str_replace('$','\$',$r[1])"; }, $val);
+//            $val = preg_replace("/\[([^\[\]]*)\]/eis", "'.'.str_replace('$','\$','\\1')", $val);
+            $val = preg_replace_callback("/\[([^\[\]]*)\]/is", function($r) { return '.'.str_replace('$','\$',$r[1]); }, $val);
         }
 
         if (strrpos($val, '|') !== false)

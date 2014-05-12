@@ -3,105 +3,112 @@
 
 <div class="list">
 
-		<!-- {if $category > 0} -->
-		<form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
-		<!-- {/if} -->
+    <!-- {if $category > 0} -->
+    <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+    <!-- {/if} -->
 
-<!-- {if $pager.display == 'grid'} -->
+        <!-- {if $pager.display == 'grid'} -->
 
-	<div class="good_list">
-	<ul class="clearfix">
-<!--{foreach name=goods_list from=$goods_list item=goods}-->
-<!--{if $goods.goods_id > 0}-->
-<li class="marR25">
-	<div class="img_b"><a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a></div>
+        <div class="good_list">
+            <ul class="clearfix">
+                <!--{foreach name=goods_list from=$goods_list item=goods}-->
+                <!--{if $goods.goods_id > 0}-->
+                <li class="marR25">
+                    <div class="img_b"><a href="{$goods.url}"><img src="{$goods.goods_thumb}"
+                                                                   alt="{$goods.goods_name}"/></a></div>
 
-	<p class="b txtLeft p1 lineH25">
-		<a href="{$goods.url}">
-			<!-- {if $goods.goods_style_name} -->
-			{$goods.goods_style_name}
-			<!-- {else} -->
-			{$goods.goods_name}
-			<!-- {/if} -->
+                    <p class="b txtLeft p1 lineH25">
+                        <a href="{$goods.url}">
+                            <!-- {if $goods.goods_style_name} -->
+                            {$goods.goods_style_name}
+                            <!-- {else} -->
+                            {$goods.goods_name}
+                            <!-- {/if} -->
 
-			<!-- {if $goods.ename} -->
-			<span>{$goods.ename}</span>
-			<!-- {/if} -->
-		</a>
-	</p>
+                            <!-- {if $goods.ename} -->
+                            <span>{$goods.ename}</span>
+                            <!-- {/if} -->
+                        </a>
+                    </p>
 
-	<p class="p2 txtLeft">
-		<span id="attr_p_{$goods.goods_id}" style="display:none;">{$goods.shop_price_n}</span>
-		<input type="hidden" id="attr_{$goods.goods_id}" value="{$goods.goods_id}">
-		<span class="left marT5"><a class="button_tongyong button_width" href="{$goods.url}">产品详情</a></span>
-		<span class="left marL10 b font" style="color:#c72844;display:none;">{$goods.shop_price}</span>
+                    <p class="p2 txtLeft">
+                        <span id="attr_p_{$goods.goods_id}" style="display:none;">{$goods.shop_price_n}</span>
+                        <input type="hidden" id="attr_{$goods.goods_id}" value="{$goods.goods_id}">
+                        <span class="left marT5">
+                            <a class="button_tongyong button_width" href="{$goods.url}">产品详情</a>
+                        </span>
+                        <span class="left marL10 b font" style="color:#c72844;display:none;">{$goods.shop_price}</span>
 		<span class="right marT5">
 			<a class="button_tongyong button_width" href="javascript:addToCart({$goods.goods_id})">立即购买</a>
 		</span>
-	</p>
+                    </p>
 
-	<p style="display:none;">
-		<a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:"html"}','{$goods.type}')" style="display:none;">{$lang.compare}</a>
-		<input name="ship_date" type="text" id="shipDate" value="" />
-	</p>
+                    <p style="display:none;">
+                        <a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:" html"}','{$goods.type}')" style="display:none;">{$lang.compare}</a>
+                        <input name="ship_date" type="text" id="shipDate" value=""/>
+                    </p>
 
-	<p class="txtLeft lineH60">
-	{$goods.goods_desc|truncate:120}
-	</p>
+                    <p class="txtLeft lineH60">
+                        {$goods.goods_desc|truncate:120}
+                    </p>
 
-</li>
-<!--{/if}-->
-<!--{/foreach}-->
-	</ul>
-	</div>
+                </li>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </ul>
+        </div>
 
-<!-- {elseif $pager.display == 'list'} -->
-<link rel="stylesheet" href="{$template_dir}/css/cake.css" type="text/css" />
-<!--{foreach name=goods_list from=$goods_list item=goods}-->
-<!--{if $goods.goods_id > 0}-->
-<div class="pro_content clearfix">
-	<div class="cake_img">
-		<a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a>
-	</div>
-	<div class="cake_name">
-		<div class="name1">
+        <!-- {elseif $pager.display == 'list'} -->
+        <link rel="stylesheet" href="{$template_dir}/css/cake.css" type="text/css"/>
+        <!--{foreach name=goods_list from=$goods_list item=goods}-->
+        <!--{if $goods.goods_id > 0}-->
+        <div class="pro_content clearfix">
+            <div class="cake_img">
+                <a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}"/></a>
+            </div>
+            <div class="cake_name">
+                <div class="name1">
 			<span class="b">
 				<a href="{$goods.url}">
-					<!-- {if $goods.goods_style_name} -->
-					{$goods.goods_style_name}
-					<!-- {else} -->
-					{$goods.goods_name}
-					<!-- {/if} -->
+                    <!-- {if $goods.goods_style_name} -->
+                    {$goods.goods_style_name}
+                    <!-- {else} -->
+                    {$goods.goods_name}
+                    <!-- {/if} -->
 
-					<!-- {if $goods.ename} -->
-					<span>{$goods.ename}</span>
-					<!-- {/if} -->
-				</a>
+                    <!-- {if $goods.ename} -->
+                    <span>{$goods.ename}</span>
+                    <!-- {/if} -->
+                </a>
 			</span>
-		</div>
+                </div>
 
 
-		<div class="lineH20 left w615">
-		<p class="h90">{$goods.goods_desc|truncate:160}</p>
-		<p><a href="{$goods.url}">详情&gt;&gt;</a></p>
-		</div>
-		<div class="right w172">
-			<p class="txtRight" style="font-size:12px;display:none;"><b>适用人群</b>：任何人群</p>
-			<p class="b txtRight padT20"><span>1.0磅</span><span class="price">{$goods.shop_price}</span></p>
-			<p class="right marT20"><a class="button_tongyong button_width" href="javascript:addToCart({$goods.goods_id})">立即购买</a></p>
-		</div>
+                <div class="lineH20 left w615">
+                    <p class="h90">{$goods.goods_desc|truncate:160}</p>
 
-	</div>
-</div>
-<!--{/if}-->
-<!--{/foreach}-->
+                    <p><a href="{$goods.url}">详情&gt;&gt;</a></p>
+                </div>
+                <div class="right w172">
+                    <p class="txtRight" style="font-size:12px;display:none;"><b>适用人群</b>：任何人群</p>
 
-<!-- {/if} -->
+                    <p class="b txtRight padT20"><span>1.0磅</span><span class="price">{$goods.shop_price}</span></p>
+
+                    <p class="right marT20"><a class="button_tongyong button_width"
+                                               href="javascript:addToCart({$goods.goods_id})">立即购买</a></p>
+                </div>
+
+            </div>
+        </div>
+        <!--{/if}-->
+        <!--{/foreach}-->
+
+        <!-- {/if} -->
 
 
-		<!-- {if $category > 0} -->
-		</form>
-		<!-- {/if} -->
+        <!-- {if $category > 0} -->
+    </form>
+    <!-- {/if} -->
 
 
 </div>

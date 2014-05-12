@@ -96,6 +96,184 @@
 <!-- TemplateEndEditable -->
 
 	<!-- TemplateBeginEditable name="产品列表" -->
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+
+
+
+<!-- {if $best_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="box">
+<div class="box_2 centerPadd">
+  <div class="itemTit" id="itemBest">
+      {if $cat_rec[1]}
+      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, 0);">{$lang.all_goods}</a></h2>
+      {foreach from=$cat_rec[1] item=rec_data}
+      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemBest', 'h2', this);get_cat_recommend(1, {$rec_data.cat_id})">{$rec_data.cat_name}</a></h2>
+      {/foreach}
+      {/if}
+  </div>
+  <div id="show_best_area" class="clearfix goodsBox">
+  <!-- {/if} -->
+  <!--{foreach from=$best_goods item=goods}-->
+  <div class="goodsItem">
+         <span class="best"></span>
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+           </font>
+        </div>
+
+		<div>
+	{if $goods.att.attr_name }
+		{if $goods.att.attr_value}
+			{$goods.att.attr_value}
+		{/if}
+	 {else}
+		1����6�磩
+	 {/if}
+			/
+		</div>
+
+
+  <!--{/foreach}-->
+  <div class="more"><a href="../search.php?intro=best"><img src="images/more.gif" /></a></div>
+  <!-- {if $cat_rec_sign neq 1} -->
+  </div>
+</div>
+</div>
+<div class="blank5"></div>
+  <!-- {/if} -->
+<!-- {/if} -->
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+
+<div class="major" style="padding-top:0;">
+
+	<div class="good_list">
+	<ul class="clearfix">
+		<!-- {if $category > 0} -->
+		<form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+		<!-- {/if} -->
+
+
+
+<!--{foreach name=goods_list from=$goods_list item=goods}-->
+<!--{if $goods.goods_id > 0}-->
+<li>
+	<div class="img_b"><a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a></div>
+	<dl>
+		<dt>
+			<a href="{$goods.url}" class="f6">
+				<!-- {if $goods.ename} -->
+				{$goods.ename}
+				<br>
+				<!-- {/if} -->
+
+				<!-- {if $goods.goods_style_name} -->
+				{$goods.goods_style_name}
+				<!-- {else} -->
+				{$goods.goods_name}
+				<!-- {/if} -->
+			</a>
+		</dt>
+		<dd>
+			<input type="hidden" id="attr_{$goods.goods_id}" value="{$goods.goods_id}">
+			<a href="{$goods.url}">详情</a>
+			<a href="javascript:addToCartStep({$goods.goods_id})">立即购买</a>
+		</dd>
+	</dl>
+</li>
+<!--{/if}-->
+<!--{/foreach}-->
+
+
+
+		<!-- {if $category > 0} -->
+		</form>
+		<!-- {/if} -->
+	</ul>
+	</div>
+
+</div>
+
+
+
+
+
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+
+<script type="text/javascript">
+    window.onload = function()
+    {
+      Compare.init();
+      fixpng();
+    }
+        var button_compare = "比较选定商品";
+        var exist = "您已经选择了%s";
+        var count_limit = "最多只能选择4个商品进行对比";
+        var goods_type_different = "\"%s\"和已选择商品类型不同无法进行对比";
+        var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
+	function selectPage(sel)
+	{
+	  sel.form.submit();
+	}
+
+	/**/
+function addToCartStep(goodsId, parentId)
+{
+  var goods        = new Object();
+  var spec_arr     = new Array();
+  var fittings_arr = new Array();
+  var oLabel       = "attr_"+goodsId;
+  var number       = 1;
+  var attr_id      = document.getElementById(oLabel);
+  // 检查是否有商品规格
+  spec_arr.push(attr_id.value);
+   
+  goods.spec     = spec_arr;
+  goods.goods_id = goodsId;
+  goods.number   = number;
+  goods.parent   = (typeof(parentId) == "undefined") ? 0 : parseInt(parentId);
+  Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), addToCartResponse, 'POST', 'JSON');
+}
+/**/
+</script>
+ <!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
 <!--// end products list //-->
 

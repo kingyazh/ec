@@ -1,121 +1,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-
-<div class="major" style="padding-top:0;">
-
-	<div class="good_list">
-	<ul class="clearfix">
-		<!-- {if $category > 0} -->
-		<form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
-		<!-- {/if} -->
-
-
-
-<!--{foreach name=goods_list from=$goods_list item=goods}-->
-<!--{if $goods.goods_id > 0}-->
-<li>
-	<div class="img_b"><a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a></div>
-	<dl>
-		<dt>
-			<a href="{$goods.url}" class="f6">
-				<!-- {if $goods.ename} -->
-				{$goods.ename}
-				<br>
-				<!-- {/if} -->
-
-				<!-- {if $goods.goods_style_name} -->
-				{$goods.goods_style_name}
-				<!-- {else} -->
-				{$goods.goods_name}
-				<!-- {/if} -->
-			</a>
-		</dt>
-		<dd>
-			<input type="hidden" id="attr_{$goods.goods_id}" value="{$goods.goods_id}">
-			<a href="{$goods.url}">详情</a>
-			<a href="javascript:addToCartStep({$goods.goods_id})">立即购买</a>
-		</dd>
-	</dl>
-</li>
-<!--{/if}-->
-<!--{/foreach}-->
-
-
-
-		<!-- {if $category > 0} -->
-		</form>
-		<!-- {/if} -->
-	</ul>
-	</div>
-
+<script type="text/javascript" src="{$template_dir}/js/jcarousellite_1.0.1.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery(".loop{$goods_cat.id}").jCarouselLite({
+            btnNext: ".next{$goods_cat.id}",
+            btnPrev: ".prev{$goods_cat.id}",
+            auto: 3000,
+            speed: 800,
+            auto: false
+        });
+    });
+</script>
+<!--loop -->
+<div class="xuanhuan_out">
+    <div class="title clearfix">
+        <h1 class="h1 left"><a href="{$goods_cat.url}"><span>{$goods_cat.name|escape:html}</span>&nbsp;&nbsp;&nbsp;</a></h1>
+        <h1 class="h1 right"><a href="{$goods_cat.url}"><span>查看更多</span></a></h1>
+    </div>
+    <div class="xuanhuan">
+        <a href="javascript:void(0);" class="next{$goods_cat.id} next1"></a>
+        <div class="loop{$goods_cat.id} loop1" style="width: 928px; overflow: hidden; visibility: visible; position: relative; z-index: 2; left: 0px;">
+            <ul>
+                <!--{foreach from=$cat_goods item=goods}-->
+                <li>
+                    <p class="txtCenter marT20">
+                        <a href="{$goods.url}">
+                            <img src="{$goods.thumb}" alt="{$goods.name|escape:html}" />
+                        </a>
+                    </p>
+                    <p class="name"><a href="{$goods.url}">{$goods.name|escape:html}</a></p>
+                    <p class="price">
+                        <span class="right marR5"><a href="{$goods.url}">立即购买&gt;&gt;</a></span>
+                        <span class="p">{$goods.shop_price}起{$goods.promote_price}{$goods.price}</span>
+                    </p>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="prev{$goods_cat.id} prev1"></a>
+    </div>
+    <div class="xuanhuan_b"></div>
 </div>
+<!--loop 结束-->
 
 
-
-
-
-<script type="Text/Javascript" language="JavaScript">
-<!--
-{literal}
-function selectPage(sel)
-{
-  sel.form.submit();
-}
-{/literal}
-//-->
-</script>
-<script type="text/javascript">
-window.onload = function()
-{
-  Compare.init();
-  fixpng();
-}
-{foreach from=$lang.compare_js item=item key=key}
-{if $key neq 'button_compare'}
-var {$key} = "{$item}";
-{else}
-var button_compare = '';
-{/if}
-{/foreach}
-var compare_no_goods = "{$lang.compare_no_goods}";
-var btn_buy = "{$lang.btn_buy}";
-var is_cancel = "{$lang.is_cancel}";
-var select_spe = "{$lang.select_spe}";
-</script>
-
-<script type="text/javascript">
-    window.onload = function()
-    {
-      Compare.init();
-      fixpng();
-    }
-        var button_compare = "比较选定商品";
-        var exist = "您已经选择了%s";
-        var count_limit = "最多只能选择4个商品进行对比";
-        var goods_type_different = "\"%s\"和已选择商品类型不同无法进行对比";
-        var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
-	function selectPage(sel)
-	{
-	  sel.form.submit();
-	}
-
-	/**/
-function addToCartStep(goodsId, parentId)
-{
-  var goods        = new Object();
-  var spec_arr     = new Array();
-  var fittings_arr = new Array();
-  var oLabel       = "attr_"+goodsId;
-  var number       = 1;
-  var attr_id      = document.getElementById(oLabel);
-  // 检查是否有商品规格
-  spec_arr.push(attr_id.value);
-   
-  goods.spec     = spec_arr;
-  goods.goods_id = goodsId;
-  goods.number   = number;
-  goods.parent   = (typeof(parentId) == "undefined") ? 0 : parseInt(parentId);
-  Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), addToCartResponse, 'POST', 'JSON');
-}
-/**/
-</script>

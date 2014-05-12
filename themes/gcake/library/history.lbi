@@ -1,13 +1,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="box" id='history_div'>
- <div class="box_1">
-  <h3><span>{$lang.view_history}</span></h3>
-  <div class="boxCenterList clearfix" id='history_list'>
-    {insert name='history'}
-  </div>
- </div>
+
+
+<link rel="stylesheet" href="{$template_dir}/css/index.css" type="text/css" />
+<script type="text/javascript" src="{$template_dir}/js/jcarousellite_1.0.1.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery(".looph").jCarouselLite({
+            btnNext: ".nexth",
+            btnPrev: ".prevh",
+            auto: 3000,
+            speed: 800,
+            auto: false
+        });
+    });
+</script>
+<!--loop -->
+<div class="xuanhuan_out" id='history_div'>
+    <div class="title clearfix">
+        <h1 class="h1 left"><a href="javascript:void(0);" target="_blank"><span>{$lang.view_history}</span>&nbsp;&nbsp;&nbsp;History Goods</a></h1>
+        <h1 class="h1 right" id="clear_history"><a href="javascript:void(0);" onclick="clear_history()"><span>清空历史记录</span></a></h1>
+    </div>
+    <div class="xuanhuan" id="history_list">
+        <a href="javascript:void(0);" class="nexth"></a>
+        <div class="looph" style="width: 928px; overflow: hidden; visibility: visible; position: relative; z-index: 2; left: 0px;">
+            <ul>
+            {insert name='history'}
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="prevh"></a>
+    </div>
+    <div class="xuanhuan_b"></div>
 </div>
-<div class="blank5"></div>
+<!--loop 结束-->
+
+
+
+
 <script type="text/javascript">
 if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
 {
