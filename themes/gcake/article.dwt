@@ -11,6 +11,7 @@
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{$template_dir}/css/global.css" type="text/css" />
+<link rel="stylesheet" href="{$template_dir}/css/index.css" type="text/css" />
 {* 包含脚本文件 *}
 {insert_scripts files='co/common.js,jquery-1.7.2.min.js,jquery.json-2.4.min.js'}
 </head>
@@ -21,93 +22,97 @@
 <!---->
 <!-- #BeginLibraryItem "/library/index_show.lbi" --><!-- #EndLibraryItem -->
 
+<div class="body_M">
 
-<div class="pic_menu">
-    <ul class="clearfix">
-        <!-- {foreach from=$artciles_list item=articles} -->
-            <!--{if $article.id = $articles.id && $articles.file_url != ''}-->
-                <!--{if $articles.file_url.iteration lt 4}-->
-                <li><a href="{$articles.true_url}" title="{$articles.title|escape:html}"><img src="{$articles.file_url}" /></a></li>
+    <div class="pic_menu">
+        <ul class="clearfix">
+            <!-- {foreach from=$artciles_list item=articles name=show_article} -->
+                <!--{if $article.id = $articles.id && $articles.file_url != ''}-->
+                    <!--{if $smarty.foreach.show_article.iteration lt 4}-->
+                    <li><a href="{$articles.true_url}" title="{$articles.title|escape:html}"><img src="{$articles.file_url}" /></a></li>
+                    <!--{/if}-->
                 <!--{/if}-->
-            <!--{/if}-->
-        <!-- {/foreach} -->
-    </ul>
-</div>
+            <!-- {/foreach} -->
+        </ul>
+    </div>
 
 
-<div class="index_content clearfix">
+    <div class="index_content clearfix">
 
-    <!-- TemplateBeginEditable name="关于门客文字部分" -->
-        <div class="index_mensa">
-            <dl>
-                <dt>{$article.title|escape:html}</dt>
-                <dd>
-                    <!-- {if $article.content } -->
-                    {$article.content|truncate:300}
-                    <!-- {/if} -->
-                </dd>
-            </dl>
-            <div class="send_message">
-                <a href="#">发送到手机</a>
-                <a href="#">发表微博</a>
+        <!-- TemplateBeginEditable name="关于门客文字部分" -->
+            <div class="index_mensa">
+                <dl>
+                    <dt>{$article.title|escape:html}</dt>
+                    <dd>
+                        <!-- {if $article.content } -->
+                        {$article.content|strip_tags|truncate:300}
+                        <!-- {/if} -->
+                    </dd>
+                </dl>
+                <div class="send_message" style="display:none;">
+                    <a href="#">发送到手机</a>
+                    <a href="#">发表微博</a>
+                </div>
+            </div>
+        <!-- TemplateEndEditable -->
+
+        <!-- TemplateBeginEditable name="首页评论" -->
+        <!-- 最新评论__Begin -->
+        <div class="index_comments">
+            <h3>分享空间</h3>
+            <div class="share_site_ico">
+                <ul class="site_ico">
+                    <li class="clearfix">
+                        <a href="" target="_blank"><span class="renren"></span>人人网</a>
+                    </li>
+                    <li class="clearfix">
+                        <a href="" target="_blank"><span class="tencent"></span>腾讯微博</a>
+                    </li>
+                    <li class="clearfix">
+                        <a href="" target="_blank"><span class="weixin"></span>腾讯微信</a>
+                    </li>
+                    <li class="clearfix">
+                        <a href="" target="_blank"><span class="sina"></span>新浪微博</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    <!-- TemplateEndEditable -->
-
-    <!-- TemplateBeginEditable name="首页评论" -->
-    <!-- 最新评论__Begin -->
-    <div class="index_comments">
-        <h3>分享空间</h3>
-        <div class="share_site_ico">
-            <ul class="site_ico">
-                <li class="clearfix">
-                    <a href="" target="_blank"><span class="renren"></span>人人网</a>
-                </li>
-                <li class="clearfix">
-                    <a href="" target="_blank"><span class="tencent"></span>腾讯微博</a>
-                </li>
-                <li class="clearfix">
-                    <a href="" target="_blank"><span class="weixin"></span>腾讯微信</a>
-                </li>
-                <li class="clearfix">
-                    <a href="" target="_blank"><span class="sina"></span>新浪微博</a>
-                </li>
-            </ul>
-        </div>
+        <!-- TemplateEndEditable -->
     </div>
-    <!-- TemplateEndEditable -->
+
 </div>
 <!---->
 <!-- {else} -->
 
+<div class="body_M">
 
-<div class="major">
-    <div class="article_show">
-        <h2>{$article.title|escape:html}</h2>
-        <div class="content clearfix">
+    <div class="major">
+        <div class="article_show">
+            <h2>{$article.title|escape:html}</h2>
+            <div class="content clearfix">
 
-            <!-- {if $article.content } -->
-            {$article.content}
-            <!-- {/if} -->
+                <!-- {if $article.content } -->
+                {$article.content}
+                <!-- {/if} -->
 
-            {if $article.open_type eq 2 or $article.open_type eq 1}<br />
-            <div><a href="{$article.file_url}" target="_blank">{$lang.relative_file}</a></div>
-            {/if}
-            <div style="padding:8px; margin-top:15px; text-align:left; border-top:1px solid #ccc;">
-                <!-- 上一篇文章 -->
-                {if $next_article}
-                {$lang.next_article}:<a href="{$next_article.url}" class="f6">{$next_article.title}</a><br />
+                {if $article.open_type eq 2 or $article.open_type eq 1}<br />
+                <div><a href="{$article.file_url}" target="_blank">{$lang.relative_file}</a></div>
                 {/if}
-                <!-- 下一篇文章 -->
-                {if $prev_article}
-                {$lang.prev_article}:<a href="{$prev_article.url}" class="f6">{$prev_article.title}</a>
-                {/if}
+                <div style="padding:8px; margin-top:15px; text-align:left; border-top:1px solid #ccc;">
+                    <!-- 上一篇文章 -->
+                    {if $next_article}
+                    {$lang.next_article}:<a href="{$next_article.url}" class="f6">{$next_article.title}</a><br />
+                    {/if}
+                    <!-- 下一篇文章 -->
+                    {if $prev_article}
+                    {$lang.prev_article}:<a href="{$prev_article.url}" class="f6">{$prev_article.title}</a>
+                    {/if}
+                </div>
+
             </div>
-
         </div>
     </div>
 </div>
-
 
 
 <!-- {/if} -->

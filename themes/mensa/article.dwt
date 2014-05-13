@@ -23,9 +23,9 @@
 
 <div class="pic_menu">
     <ul class="clearfix">
-        <!-- {foreach from=$artciles_list item=articles} -->
+        <!-- {foreach from=$artciles_list item=articles name=show_article} -->
             <!--{if $article.id = $articles.id && $articles.file_url != ''}-->
-                <!--{if $articles.file_url.iteration lt 4}-->
+                <!--{if $smarty.foreach.show_article.iteration lt 4}-->
                 <li><a href="{$articles.true_url}" title="{$articles.title|escape:html}"><img src="{$articles.file_url}" /></a></li>
                 <!--{/if}-->
             <!--{/if}-->
